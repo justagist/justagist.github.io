@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saif Sidhik - CV</title>
+  <script type="text/javascript">
+  var targetUrl = 'https://docs.google.com/gview?url=https://www.dropbox.com/s/gb2y9fkrzq0gc7s/cv_sidhik.pdf?dl=1';
+  var dlUrl = "https://www.dropbox.com/s/gb2y9fkrzq0gc7s/cv_sidhik.pdf?dl=1"
+   var ori_loc = document.location.href;
+
+  function querystring(paramName) {
+    var url = document.location.href, params, param, i, reply = {}, name, value;
+    if (url.indexOf('?') < 0) {
+      return null;
+    }
+    params = url.split('?')[1].split('&');
+    for (i = 0; i < params.length; i++) {
+      param = params[i].split('=');
+      name = (param[0] || '').toLowerCase();
+      value = param[1] || '';
+      if (typeof paramName === 'undefined' || paramName.toLowerCase() === name) {
+        if (typeof reply[name] !== 'undefined') {
+          if (typeof reply[name] === 'string') {
+            reply[name] = [ reply[name], value ];
+          } else {
+            reply[name].push(value);
+          }
+          continue;
+        }
+        reply[name] = value;
+      }
+    }
+    return reply;
+  }
+
+  function redirect() {
+   var path = querystring('dl');
+   console.log(path);
+   if (path === null || typeof path.dl === 'undefined' || typeof path.dl !== 'string')     {
+    document.location.href = targetUrl;
+   } else if (path.dl == "1") {
+    document.location.href = dlUrl;
+    return;
+   }
+   else {
+        document.location.href = targetUrl;
+   }
+  //  while (document.location.href == ori_loc) {
+  //    document.location.href = targetUrl
+  //  }
+  setTimeout(() => { if(document.location.href == ori_loc){
+    window.location.reload();
+  } }, 2000);
+  }
+  </script>
+</head>
+<body onload="javascript:redirect()">
+<!-- <h1>Please wait...</h1> -->
+<h2>You are being redirected; please wait...</h2>
+<h3>If nothing happens in a few seconds, click <a href="https://www.dropbox.com/s/gb2y9fkrzq0gc7s/cv_sidhik.pdf?dl=1">this link</a> to download the file manually.</h3>
+</body>
+</html>
