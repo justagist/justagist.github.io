@@ -130,9 +130,6 @@
 
   // ---------- Render: navbar/hero/about/contact/footer ----------
   function renderShell(profile) {
-    // Brand
-    $("#brandName").textContent = profile.shortName || profile.name;
-
     // Hero
     $("#heroName").innerHTML = `Hi, I'm <span class="accent">${escapeHtml(profile.name)}</span>.`;
     $("#heroLede").innerHTML = profile.lede || profile.about[0] || "";
@@ -517,9 +514,9 @@
     const btn = $("#themeToggle");
     if (!btn) return;
     btn.addEventListener("click", () => {
-      // Default is dark; toggle flips to/from light
-      const current = document.documentElement.getAttribute("data-theme") || "dark";
-      const next = current === "dark" ? "light" : "dark";
+      // Default is light; toggle flips to/from dark
+      const current = document.documentElement.getAttribute("data-theme") || "light";
+      const next = current === "light" ? "dark" : "light";
       applyTheme(next);
       storeTheme(next);
     });
