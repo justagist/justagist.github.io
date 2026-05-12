@@ -1,0 +1,52 @@
+[
+  {
+    "role": "Senior Robotics Engineer",
+    "period": "2024 — Present",
+    "current": true,
+    "organization": "Leap AI",
+    "organizationUrl": "https://www.helloleap.ai/",
+    "description": "Currently leading the development of robot behaviour pipeline and robotics software for the next-gen warehouse automation robot from Leap AI."
+  },
+  {
+    "role": "Lead Robotics Research Engineer",
+    "period": "2024",
+    "organization": "Dyson",
+    "organizationUrl": "https://www.dyson.com/",
+    "description": "As part of a multi-disciplinary <a href=\"https://www.youtube.com/watch?v=2Bh61aY8ncg\" target=\"_blank\" rel=\"noopener\">robotics team at Dyson</a>, I led the development of the control software framework, as well as implementing different control and software components required to develop a loco-manipulation platform capable of performing home-safe tasks in human-occupied environments."
+  },
+  {
+    "role": "Senior Robotics Research Engineer",
+    "period": "2021 — 2023",
+    "organization": "Dyson",
+    "organizationUrl": "https://www.dyson.com/",
+    "description": "Developed control and state estimation algorithms for locomotion and manipulation tasks for different robot embodiments and formats. Developed hardware and simulation interfaces to be able to apply the same controllers and perform the same tasks on a physical and simulated robot interchangeably."
+  },
+  {
+    "role": "Software Developer, Product Designer",
+    "period": "2017 — 2021",
+    "organization": "Obi Robotics",
+    "organizationUrl": "http://www.obirobotics.com",
+    "description": "As one of the founding members of the robotics solutions company, I worked part-time as a software developer and product designer (3D CAD designing) for <a href=\"http://www.obirobotics.com\" target=\"_blank\" rel=\"noopener\">Obi Robotics</a>."
+  },
+  {
+    "role": "Teaching Assistant",
+    "period": "Nov 2017 — 2021",
+    "organization": "University of Birmingham, UK",
+    "organizationUrl": "http://www.cs.bham.ac.uk",
+    "description": "Worked as teaching assistant for modules including <a href=\"https://www.cs.bham.ac.uk/internal/modules/2018/06-13520/\" target=\"_blank\" rel=\"noopener\">Intelligent Robotics</a>, <a href=\"https://www.cs.bham.ac.uk/internal/modules/2017/06-22382/\" target=\"_blank\" rel=\"noopener\">Robot Programming</a>, <a href=\"https://www.cs.bham.ac.uk/internal/modules/2013/06-20233\" target=\"_blank\" rel=\"noopener\">Intelligent Data Analysis</a>, <a href=\"https://www.cs.bham.ac.uk/internal/modules/2019/06-30175/\" target=\"_blank\" rel=\"noopener\">Data Structures and Algorithms</a>, <a href=\"https://www.cs.bham.ac.uk/internal/modules/2019/06-26955/\" target=\"_blank\" rel=\"noopener\">Software Workshop</a>, and <a href=\"https://www.cs.bham.ac.uk/internal/modules/2018/06-28912/\" target=\"_blank\" rel=\"noopener\">Graphics</a>."
+  },
+  {
+    "role": "Tutor",
+    "period": "Sept 2018 — Jan 2019",
+    "organization": "University of Birmingham, UK",
+    "organizationUrl": "http://www.cs.bham.ac.uk",
+    "description": "Conducted tutorial sessions on Java for undergraduate students for the <a href=\"https://www.cs.bham.ac.uk/internal/modules/2019/06-26955/\" target=\"_blank\" rel=\"noopener\">Software Workshop</a> module."
+  },
+  {
+    "role": "Chief Technical Officer",
+    "period": "March 2015 — May 2016",
+    "organization": "Innovation and Entrepreneurship Development Cell, TKMCE (Non-Profit)",
+    "organizationUrl": "http://www.iedctkmce.com",
+    "description": "Co-founded the <a href=\"http://www.iedctkmce.com\" target=\"_blank\" rel=\"noopener\">Innovation and Entrepreneurship Development Cell (TKMCE)</a> to encourage and develop innovative and entrepreneurship spirit in students. Helped in starting the <a href=\"https://www.fablabs.io/labs/fablabtkmce\" target=\"_blank\" rel=\"noopener\">APJ DreamLab</a>, a state of the art FabLab for product prototyping. As CTO, I conducted various technical workshops, competitions and seminars, as well as led several projects for developing affordable assistive devices for the differently abled."
+  }
+]

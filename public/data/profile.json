@@ -1,0 +1,39 @@
+{
+  "name": "Saif Sidhik",
+  "shortName": "Saif",
+  "tagline": "Robotics & Control · Machine Learning · Manipulation · Locomotion",
+  "lede": "I'm a robotics engineer with experience across model-based control, machine learning, and task-level behaviour design for building robots that work reliably alongside humans — from warehouse automation to in-home manipulation.",
+  "roles": [
+    "Robotics & Control",
+    "Machine Learning",
+    "Manipulation",
+    "Locomotion"
+  ],
+  "email": "mail@saifsidhik.page",
+  "metaDescription": "Saif Sidhik is a Senior Robotics Engineer at Leap AI (previously Lead Robotics Research Engineer at Dyson). His work focuses on applying model-based and learning-based techniques to perform intelligent locomotion and manipulation control for different robot embodiments to achieve complex tasks in human-occupied environments.",
+  "profileImage": "images/profile-pic.jpg",
+  "logo": "images/logo_full_banner_transparent.png",
+  "favicon": "images/logo_s_transparent.png",
+  "about": [
+    "Currently, as a Senior Robotics Engineer at <a href=\"https://www.helloleap.ai\" target=\"_blank\" rel=\"noopener\">Leap AI</a>, I lead the development of the robot behaviour pipeline as well as software integration for the next-gen warehouse automation robotic solution.",
+    "Previously, I was a Lead Robotics Research Engineer at <a href=\"https://www.dyson.com\" target=\"_blank\" rel=\"noopener\">Dyson</a>, leading the development of the control software framework, as well as implementing different control and software components required to develop a loco-manipulation platform capable of performing home-safe tasks in human-occupied environments. (<a href=\"https://www.youtube.com/watch?v=2Bh61aY8ncg\" target=\"_blank\" rel=\"noopener\">Sneak peek</a>)",
+    "I hold a PhD in Robotics from the <a href=\"https://www.cs.bham.ac.uk/research/groupings/robotics/\" target=\"_blank\" rel=\"noopener\">Intelligent Robotics Lab</a> at the <a href=\"http://www.cs.bham.ac.uk\" target=\"_blank\" rel=\"noopener\">University of Birmingham</a>, where I worked on using techniques from model-based and learning-based approaches to develop a control framework for robots performing complex manipulation tasks. The main topic of research during my PhD was <a href=\"https://phdthesis.saifsidhik.page\" target=\"_blank\" rel=\"noopener\"><b>“An Adaptive Framework for Changing-Contact Manipulation”</b></a>, done in collaboration with <a href=\"https://www.honda-ri.de/\" target=\"_blank\" rel=\"noopener\">Honda Research Institute (EU)</a>. My PhD was supervised by <a href=\"https://www.cs.bham.ac.uk/~sridharm/\" target=\"_blank\" rel=\"noopener\">Mohan Sridharan</a>, <a href=\"https://scholar.google.com/citations?user=sLEmy_AAAAAJ\" target=\"_blank\" rel=\"noopener\">Dirk Ruiken</a>, and <a href=\"https://scholar.google.com/citations?user=jZMpSNwAAAAJ&hl=en\" target=\"_blank\" rel=\"noopener\">Akinobu Hayashi</a>."
+  ],
+  "social": [
+    { "label": "GitHub", "icon": "github", "url": "https://github.saifsidhik.page" },
+    { "label": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/in/saifsidhik/" },
+    { "label": "YouTube", "icon": "youtube", "url": "https://youtube.saifsidhik.page" },
+    { "label": "Email", "icon": "mail", "url": "mailto:mail@saifsidhik.page" }
+  ],
+  "cv": {
+    "viewUrl": "cv.html",
+    "downloadUrl": "https://www.dropbox.com/s/gb2y9fkrzq0gc7s/cv_sidhik.pdf?dl=1"
+  },
+  "footer": {
+    "copyright": "© Saif Sidhik 2021 — 2025."
+  },
+  "analytics": {
+    "gtagId": "UA-160751137-2",
+    "googleSiteVerification": "iujHU7zhIAxWh-IasdBap24_cXFvkbPQt0uJHzgCis8"
+  }
+}

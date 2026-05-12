@@ -1,0 +1,153 @@
+[
+  {
+    "id": "adaptiveframework-conf",
+    "type": "journal",
+    "typeLabel": "Journal",
+    "year": 2024,
+    "authors": "S. Sidhik, M. Sridharan, D. Ruiken",
+    "title": "An Adaptive Framework for Trajectory Following in Changing-Contact Robot Manipulation Tasks",
+    "venue": "Robotics and Autonomous Systems (2024)",
+    "image": "images/frameworkimg.png",
+    "video": "https://www.youtube.com/embed/ZJ8baqQ5pRY",
+    "abstract": "We describe an adaptive control framework for changing-contact robot manipulation tasks that require the robot to make and break contacts with objects and surfaces. The piecewise continuous interaction dynamics of such tasks make it difficult to construct and use a single dynamics model or control strategy. Also, the nonlinear dynamics during contact changes can damage the robot or the domain objects. Our framework enables the robot to incrementally improve its prediction of contact changes in such tasks, efficiently learn models for the piecewise continuous interaction dynamics, and to provide smooth and accurate trajectory tracking based on a task-space variable impedance controller. We experimentally compare the performance of our framework against that of representative control methods to establish that the adaptive control, prediction, and incremental learning capabilities of our framework are essential to achieve the desired smooth control of changing-contact robot manipulation tasks.",
+    "publishedIn": "Published in: <a href=\"https://doi.org/10.1016/j.robot.2024.104785\" target=\"_blank\" rel=\"noopener\">Robotics and Autonomous Systems</a> (2024).",
+    "links": [
+      { "label": "Paper", "url": "https://doi.org/10.1016/j.robot.2024.104785" }
+    ],
+    "plainCite": "Saif Sidhik, Mohan Sridharan, Dirk Ruiken, An adaptive framework for trajectory following in changing-contact robot manipulation tasks, Robotics and Autonomous Systems, 2024, 104785, ISSN 0921-8890, https://doi.org/10.1016/j.robot.2024.104785. (https://www.sciencedirect.com/science/article/pii/S0921889024001696), Keywords: Robot manipulation tasks; Discontinuous interaction dynamics; Variable impedance control; Adaptive control",
+    "bibtex": "@article{SIDHIK2024104785,\n  title   = {An adaptive framework for trajectory following in changing-contact robot manipulation tasks},\n  journal = {Robotics and Autonomous Systems},\n  pages   = {104785},\n  year    = {2024},\n  issn    = {0921-8890},\n  doi     = {https://doi.org/10.1016/j.robot.2024.104785},\n  url     = {https://www.sciencedirect.com/science/article/pii/S0921889024001696},\n  author  = {Saif Sidhik and Mohan Sridharan and Dirk Ruiken},\n  keywords = {Robot manipulation tasks, Discontinuous interaction dynamics, Variable impedance control, Adaptive control}\n}"
+  },
+  {
+    "id": "contactchangehandle-conf",
+    "type": "conference",
+    "typeLabel": "Conference",
+    "year": 2021,
+    "authors": "S. Sidhik, M. Sridharan, D. Ruiken",
+    "title": "Towards an Online Framework for Changing-Contact Robot Manipulation Tasks",
+    "venue": "International Conference on Intelligent Robots and Systems (IROS), 27 September – 1 October 2021, Prague, Czech Republic (Virtual).",
+    "image": "images/contactkf.jpg",
+    "video": "https://www.youtube.com/embed/ZJ8baqQ5pRY",
+    "abstract": "We describe a framework for changing-contact robot manipulation tasks, which require the robot to make and break contacts with objects and surfaces. The discontinuous interaction dynamics of such tasks make it difficult to construct and use a single dynamics model or control strategy for such tasks. For any target motion trajectory, our framework incrementally improves its prediction of when contacts will occur. This prediction and a model relating approach velocity to impact force modify the velocity profile of the motion sequence such that it is C-infinity smooth, and help achieve a desired force on impact. We implement this framework by building on our hybrid force-motion variable impedance controller for continuous-contact tasks. We evaluate our framework in the illustrative context of a robot manipulator performing sliding tasks involving multiple contact changes with surfaces of different properties.",
+    "publishedIn": "Submitted to: <a href=\"https://www.iros2021.org/\" target=\"_blank\" rel=\"noopener\">International Conference on Intelligent Robots and Systems (IROS)</a>, 27 September – 1 October 2021, Prague, Czech Republic (Virtual).",
+    "links": [
+      { "label": "Paper", "url": "https://www.researchgate.net/publication/355560054_Towards_an_Online_Framework_for_Changing-Contact_Robot_Manipulation_Tasks" }
+    ],
+    "plainCite": "S. Sidhik, M. Sridharan, D. Ruiken. \"Towards a Framework for Changing-Contact Robot Manipulation,\" International Conference on Intelligent Robots and Systems (IROS), 27 September – 1 October 2021, Prague, Czech Republic (Virtual).",
+    "bibtex": "@INPROCEEDINGS{sidhik:iros21,\n  author    = {Sidhik, Saif and Sridharan, Mohan and Ruiken, Dirk},\n  booktitle = {2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n  title     = {Towards an Online Framework for Changing-Contact Robot Manipulation Tasks},\n  year      = {2021},\n  pages     = {5203-5210},\n  doi       = {10.1109/IROS51168.2021.9636278}\n}"
+  },
+  {
+    "id": "hybrid-conf",
+    "type": "conference",
+    "typeLabel": "Conference",
+    "year": 2020,
+    "authors": "S. Sidhik, M. Sridharan, D. Ruiken",
+    "title": "Learning Hybrid Models for Variable Impedance Control of Changing-Contact Manipulation Tasks",
+    "venue": "Eighth Annual Conference on Advances in Cognitive Systems (ACS 2020), August 10-12, 2020, (Virtual).",
+    "image": "images/rsz_surfaces_img.png",
+    "video": "https://www.youtube.com/embed/m210rxIDZ7Q",
+    "abstract": "Many robot manipulation tasks comprise discrete action sequences characterized by continuous dynamics, while the transitions between these discrete dynamic modes are characterized by discontinuous dynamics. The individual modes may represent different types of contacts, surfaces, or other factors, and each mode and transition between the modes may require a different control strategy. This paper describes a piece-wise continuous, hybrid control framework for such manipulation tasks. The underlying representation enables the robot to automatically and efficiently detect the transitions between known modes, recognize new modes, and incrementally learn a dynamics model for variable impedance (i.e., stiffness) control in each mode, invariant to the direction of motion and the magnitude of applied forces. The framework is evaluated on a robot manipulator sliding an object along a surface to achieve a desired motion trajectory in the presence of changes in surface friction, applied force, or the type of contact between the object and the surface.",
+    "publishedIn": "Submitted to: <a href=\"http://www.cogsys.org/\" target=\"_blank\" rel=\"noopener\">Eighth Annual Conference on Advances in Cognitive Systems (ACS 2020)</a>, August 10-12, 2020, (Virtual).",
+    "links": [
+      { "label": "Paper", "url": "https://advancesincognitivesystems.github.io/acs/data/ACS2020_paper_30.pdf" }
+    ],
+    "plainCite": "S. Sidhik, M. Sridharan, D. Ruiken. \"Learning Hybrid Models for Variable Impedance Control of Changing-Contact Manipulation Tasks\", Eighth Annual Conference on Advances in Cognitive Systems (ACS 2020), August 2020, (Virtual).",
+    "bibtex": "@INPROCEEDINGS{sidhik_learning2020,\n  author    = {S. Sidhik and M. Sridharan and D. Ruiken},\n  booktitle = {Eighth Annual Conference on Advances in Cognitive Systems (ACS 2020)},\n  title     = {Learning Hybrid Models for Variable Impedance Control of Changing-Contact Manipulation Tasks},\n  year      = {2020}\n}"
+  },
+  {
+    "id": "ffvarimp-conf",
+    "type": "conference",
+    "typeLabel": "Conference",
+    "year": 2019,
+    "authors": "S. Sidhik*, M. Mathew*, M. Sridharan, J. Wyatt, M. Azad, A. Hayashi",
+    "title": "Online Learning of Feed-Forward Models for Task-Space Variable Impedance Control",
+    "venue": "International Conference on Humanoid Robots (Humanoids), October 15-17, 2019, Toronto, Canada.",
+    "image": "images/porridge.png",
+    "video": "https://www.youtube.com/embed/hbzZuO1xal8",
+    "abstract": "During the initial trials of a manipulation task, humans tend to keep their arms stiff in order to reduce the effects of any unforeseen disturbances. After a few repetitions, humans perform the task accurately with much lower stiffness. Research in human motor control indicates that this behavior is supported by learning and continuously revising internal models of the manipulation task. These internal models predict future states of the task, anticipate necessary control actions, and adapt impedance quickly to match task requirements. Drawing inspiration from these findings, we propose a framework for online learning of a time-independent forward model of a manipulation task from a small number of examples. The measured inaccuracies in the predictions of this model dynamically update the forward model and modify the impedance parameters of a feedback controller during task execution. Furthermore, our framework includes a hybrid force-motion controller that provides compliance in particular directions while adapting the impedance in other directions. These capabilities are evaluated on continuous contact tasks such as pulling non-linear springs, polishing a board, and stirring porridge.",
+    "publishedIn": "Submitted to: <a href=\"https://lcas.lincoln.ac.uk/wp/tig-ii/\" target=\"_blank\" rel=\"noopener\">International Conference on Humanoid Robots (Humanoids)</a>, October 15-17, 2019, Toronto, Canada.",
+    "links": [
+      { "label": "Paper", "url": "https://docs.google.com/gview?url=https://www.researchgate.net/profile/Saif_Sidhik/publication/336608581_Online_Learning_of_Feed-Forward_Models_for_Task-Space_Variable_Impedance_Control/links/5db028ab92851c577eb9cecd/Online-Learning-of-Feed-Forward-Models-for-Task-Space-Variable-Impedance-Control.pdf" },
+      { "label": "Other formats", "url": "https://ieeexplore.ieee.org/abstract/document/9035063" }
+    ],
+    "bibtex": "@INPROCEEDINGS{9035063,\n  author    = {M. J. Mathew and S. Sidhik and M. Sridharan and M. Azad and A. Hayashi and J. Wyatt},\n  booktitle = {2019 IEEE-RAS 19th International Conference on Humanoid Robots (Humanoids)},\n  title     = {Online Learning of Feed-Forward Models for Task-Space Variable Impedance Control},\n  year      = {2019},\n  pages     = {222-229}\n}"
+  },
+  {
+    "id": "contactchange-arms",
+    "type": "workshop",
+    "typeLabel": "Workshop",
+    "year": 2021,
+    "authors": "S. Sidhik, M. Sridharan, D. Ruiken",
+    "title": "Towards a Framework for Changing-Contact Robot Manipulation",
+    "venue": "ARMS 2021 Workshop at AAMAS 2021, May 3-7, 2021, London, UK (virtual).",
+    "image": "images/contactkf.jpg",
+    "video": "https://www.youtube.com/embed/070BMEMigzk",
+    "abstract": "Many robot manipulation tasks require the robot to make and break contact with objects and surfaces. The dynamics of such changing-contact robot manipulation tasks are discontinuous when contact is made or broken, and continuous elsewhere. These discontinuities make it difficult to construct and use a single dynamics model or control strategy for any such task. We present a framework for smooth dynamics and control of such changing-contact manipulation tasks. For any given target motion trajectory, the framework incrementally improves its prediction of when contacts will occur. This prediction and a model relating approach velocity to impact force modify the velocity profile of the motion sequence such that it is C-infinity smooth, and help achieve a desired force on impact. We implement this framework by building on our hybrid force-motion variable impedance controller for continuous contact tasks. We experimentally evaluate our framework in the illustrative context of sliding tasks involving multiple contact changes with transitions between surfaces of different properties.",
+    "publishedIn": "Submitted to: The <a href=\"https://u.cs.biu.ac.il/~agmon/arms2021/\" target=\"_blank\" rel=\"noopener\">Autonomous Robots and Multirobot Systems (ARMS) 2021 Workshop</a> at the <a href=\"https://aamas2021.soton.ac.uk/\" target=\"_blank\" rel=\"noopener\">20th International Conference on Autonomous Agents and Multiagent Systems</a>, May 3-7, 2021, London, UK (virtual).",
+    "links": [
+      { "label": "Paper", "url": "https://docs.google.com/gview?url=https://www.dropbox.com/s/uiklqsdtmprqxq6/AAMAS_2021_workshop__ARMS__paper__Towards_a_Framework_for_Changing_Contact_Robot_Manipulation.pdf?dl=0" }
+    ]
+  },
+  {
+    "id": "hybridvarimp",
+    "type": "workshop",
+    "typeLabel": "Workshop",
+    "year": 2020,
+    "authors": "S. Sidhik, M. Sridharan, D. Ruiken",
+    "title": "Online Learning of Hybrid Models for Variable Impedance Control of a Changing-Contact Manipulation Task",
+    "venue": "Workshop on Interactive Learning at ICRA 2020, June 5, 2020 (Online).",
+    "image": "images/edge_contact.png",
+    "video": "https://drive.google.com/file/d/19O7CAf5STbgPNcATM_AQ31qO_D4K00BE/preview",
+    "abstract": "Many manipulation tasks comprise discrete action sequences characterized by continuous dynamics, with the transitions between these discrete dynamic modes characterized by discontinuous dynamics. The individual modes can represent different types of contacts, surfaces, or other factors, and different control strategies may be needed for each mode and the transitions between modes. This paper describes a piece-wise continuous, hybrid control framework that automatically detects transitions between modes and incrementally learns a model of the dynamics of each mode to support variable impedance control in that mode. The recognition of modes is invariant to the direction of motion and the magnitude of applied forces. Also, new modes are identified automatically and suitable models of the corresponding dynamics are learned. The framework is evaluated on a robot manipulator sliding an object on a surface along a desired motion trajectory in the presence of changes in surface friction, applied force, or the type of contact between the object and the surface. Experimental results indicate reliable and efficient recognition of modes, learning of dynamics models, and variable-impedance control during task execution.",
+    "publishedIn": "Submitted to: <a href=\"https://sites.google.com/view/wirl-icra2020\" target=\"_blank\" rel=\"noopener\">Workshop on Interactive Learning</a> at the <a href=\"https://www.icra2020.org/\" target=\"_blank\" rel=\"noopener\">International Conference on Robotics and Automation (ICRA 2020)</a>, June 5, 2020 (Online).",
+    "links": [
+      { "label": "Read Paper", "url": "https://www.researchgate.net/publication/341684560_Online_Learning_of_Hybrid_Models_for_Variable_Impedance_Control_of_a_Changing-Contact_Manipulation_Task" }
+    ]
+  },
+  {
+    "id": "ffvarimp-sp",
+    "type": "workshop",
+    "typeLabel": "Workshop",
+    "year": 2019,
+    "authors": "S. Sidhik*, M. Mathew*, M. Sridharan, J. Wyatt, M. Azad, A. Hayashi",
+    "title": "Online Learning of Feed-Forward Models for Variable Impedance Control in Manipulation Tasks",
+    "venue": "Workshop on Task-Informed Grasping (TIG-II) at RSS, June 2019, Freiburg, Germany.",
+    "image": "images/porridge.png",
+    "video": "https://www.youtube.com/embed/vjJwexVziS0",
+    "abstract": "While performing a new manipulation task, humans tend to be stiffer in the initial trials to improve task accuracy and counter any unforeseen disturbances. After a sufficient number of repetitions, humans are able to perform the task with lower stiffness without causing any significant reduction in task performance. Existing literature in human and animal motor control indicates that learned internal models of the manipulation task and the environment are used to predict the state in response to particular control actions, adapting stiffness on the fly to minimise energy usage. Inspired by these findings, we describe a framework that, in a significant departure from existing work, supports online learning of a time-independent forward model of any given manipulation task in the task space from a small number of samples. Errors in the predictions of the forward model are used to dynamically revise the model and adapt the impedance parameters of the feedback controller. Furthermore, a hybrid force-motion controller supports compliance in certain directions while adapting the stiffness in other directions. We evaluate our framework's capabilities in the context of continuous-contact manipulation tasks with varying external forces.",
+    "publishedIn": "Submitted to: Workshop on <a href=\"https://lcas.lincoln.ac.uk/wp/tig-ii/\" target=\"_blank\" rel=\"noopener\">Task-Informed Grasping: From Perception to Physical Interaction (TIG-II)</a> at the <a href=\"http://www.roboticsconference.org/\" target=\"_blank\" rel=\"noopener\">Robotics Science and Systems Conference (RSS)</a>, June 22, 2019, Freiburg, Germany.",
+    "links": [
+      { "label": "Paper", "url": "https://lcas.lincoln.ac.uk/wp/wp-content/uploads/2019/07/RSS_Workshop_2019_Full_Paper-Michael.pdf" }
+    ]
+  },
+  {
+    "id": "ffvarimp",
+    "type": "workshop",
+    "typeLabel": "Workshop",
+    "year": 2019,
+    "award": "Best Poster Award",
+    "authors": "S. Sidhik*, M. Mathew*, M. Sridharan, M. Azad, A. Hayashi",
+    "title": "Online Learning of Forward Models for Variable Impedance Control in Manipulation Tasks",
+    "venue": "Workshop on “Emerging paradigms for robotic manipulation” at RSS, June 22, 2019, Freiburg, Germany. Won Best Poster Award.",
+    "image": "images/spring.png",
+    "abstract": "Inspired by human motor control strategies, this work presents a general variable-impedance framework for robot manipulation that makes a significant departure from existing work. It comprises of a hybrid force-motion controller that learns a state-dependent forward model of any given manipulation task. The interplay between force and motion control enables the use of the errors in the predictions of the forward model to dynamically adapt the impedance parameters of the feedback controller. The time-independent formulation of variable impedance in the task-space of the robot makes it generalisable to different task environments.",
+    "publishedIn": "Submitted to: Workshop on <a href=\"http://sirslab.dii.unisi.it/RSSWorkshopGrasping/index.html#program\" target=\"_blank\" rel=\"noopener\">Emerging paradigms for robotic manipulation: from the lab to the productive world</a> at the <a href=\"http://www.roboticsconference.org/\" target=\"_blank\" rel=\"noopener\">Robotics Science and Systems Conference (RSS)</a>, June 22, 2019, Freiburg, Germany.",
+    "links": [
+      { "label": "Poster (Best Poster Award)", "url": "http://docs.google.com/gview?url=https://dl.dropboxusercontent.com/s/hu5o9n9rj5nf07j/poster_final.pdf?dl=0" }
+    ]
+  },
+  {
+    "id": "ffvarimp-ukman",
+    "type": "workshop",
+    "typeLabel": "Workshop",
+    "year": 2019,
+    "authors": "S. Sidhik*, M. Mathew*, M. Sridharan, J. Wyatt, M. Azad, A. Hayashi",
+    "title": "Online Learning of Feed-Forward Models for Variable Impedance Control in Manipulation Tasks",
+    "venue": "UK Manipulation Workshop, April 9-10, 2019, Leeds, UK.",
+    "image": "images/ffvarimp.jpg",
+    "abstract": "While performing a new manipulation task, it can be observed that humans tend to be stiffer in the initial trials to improve task accuracy and to counter any disturbances that may affect task performance. However, with more experience, humans create internal models of the task environment to predict environment state, which enables them to decrease the stiffness. This work aims to develop a similar variable impedance behaviour in robot manipulators by learning forward models of tasks. We put forward an approach to improve the feed-forward model online, and optimise the gain parameters of the robot's feedback controller using the model accuracy. Our framework also proposes a way of decoupling the ‘stiff’ and ‘compliant’ directions in a task using a hybrid force-motion controller.",
+    "publishedIn": "Submitted to: The <a href=\"https://robotics.leeds.ac.uk/events/the-3rd-uk-robot-manipulation-workshop/\" target=\"_blank\" rel=\"noopener\">3rd UK Manipulation Workshop</a>, April 9-10, 2019, Leeds, UK.",
+    "links": [
+      { "label": "Poster", "url": "https://docs.google.com/gview?url=https://dl.dropboxusercontent.com/s/h16b7a58gl9o6a2/UK_Manipulation_Workshop_2019_Poster.pdf?dl=0" }
+    ]
+  }
+]
