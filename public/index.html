@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Saif Sidhik</title>
-    <meta name="description" content="Saif Sidhik — Robotics & Control, Machine Learning, Manipulation, Locomotion." />
+    <meta name="description" content="Saif Sidhik -- Robotics & Control, Machine Learning, Manipulation, Locomotion." />
     <meta name="author" content="Saif Sidhik" />
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" type="image/png" href="images/logo_s_transparent.png" />
@@ -53,9 +53,9 @@
         <nav aria-label="Primary">
           <ul class="nav__links" id="navLinks">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Portfolio</a></li>
             <li><a href="#publications">Publications</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Résumé</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -93,8 +93,8 @@
           <ul class="hero__roles" id="heroRoles"></ul>
           <div class="hero__actions">
             <a class="btn btn-primary" href="#about">Read more</a>
+            <a class="btn btn-ghost" href="#projects">Portfolio</a>
             <a class="btn btn-ghost" href="#publications">Publications</a>
-            <a class="btn btn-ghost" href="#projects">Projects</a>
             <div class="hero__social" id="heroSocial"></div>
           </div>
         </div>
@@ -105,7 +105,7 @@
         <div class="container">
           <header class="section-head">
             <span class="eyebrow">About</span>
-            <h2>Background &amp; current focus.</h2>
+            <h2>Background &amp; current focus</h2>
             <p>Robotics engineer focused on bringing control, learning and manipulation algorithms onto real-world robots.</p>
           </header>
           <div class="about__grid">
@@ -116,61 +116,12 @@
       </section>
 
       <!-- ============= Experience & Education ============= -->
-      <section id="experience">
-        <div class="container">
-          <header class="section-head">
-            <span class="eyebrow">Résumé</span>
-            <h2>Experience &amp; Education.</h2>
-            <p>A timeline of where I've worked and studied.</p>
-          </header>
-
-          <div class="resume__split">
-            <div>
-              <h3><span data-icon="briefcase"></span> Experience</h3>
-              <ol class="timeline" id="experienceTimeline"></ol>
-            </div>
-            <div>
-              <h3><span data-icon="cap"></span> Education</h3>
-              <ol class="timeline" id="educationTimeline"></ol>
-            </div>
-          </div>
-
-          <div class="hero__actions" style="margin-top:2.5rem">
-            <a class="btn btn-primary" id="cvView" href="cv.html" target="_blank" rel="noopener">View CV</a>
-            <a class="btn btn-ghost" id="cvDownload" href="#" download><span data-icon="download"></span> Download CV</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============= Publications ============= -->
-      <section id="publications">
-        <div class="container">
-          <header class="section-head">
-            <span class="eyebrow">Publications</span>
-            <h2>Research papers &amp; workshops.</h2>
-            <p>Click any entry to expand the abstract, video and citation details.</p>
-          </header>
-
-          <div class="toolbar">
-            <label class="toolbar__search" aria-label="Search publications">
-              <span data-icon="search"></span>
-              <input id="publicationsSearch" type="search" placeholder="Search publications…" />
-            </label>
-            <div class="toolbar__filters" id="publicationsFilters"></div>
-            <span class="toolbar__count" id="publicationsCount"></span>
-          </div>
-
-          <ul class="card-list" id="publicationsList"></ul>
-        </div>
-      </section>
-
-      <!-- ============= Projects ============= -->
       <section id="projects">
         <div class="container">
           <header class="section-head">
             <span class="eyebrow">Portfolio</span>
-            <h2>Open source &amp; other projects.</h2>
-            <p>Libraries, frameworks and side projects — mostly Python and ROS.</p>
+            <h2>Open source projects</h2>
+            <p>Libraries and side projects</p>
           </header>
 
           <div class="toolbar">
@@ -191,18 +142,67 @@
         </div>
       </section>
 
+      <!-- ============= Publications ============= -->
+      <section id="publications">
+        <div class="container">
+          <header class="section-head">
+            <span class="eyebrow">Publications</span>
+            <h2>Research papers &amp; workshops</h2>
+            <p>A compilation of my research work from my academic days.</p>
+          </header>
+
+          <div class="toolbar">
+            <label class="toolbar__search" aria-label="Search publications">
+              <span data-icon="search"></span>
+              <input id="publicationsSearch" type="search" placeholder="Search publications…" />
+            </label>
+            <div class="toolbar__filters" id="publicationsFilters"></div>
+            <span class="toolbar__count" id="publicationsCount"></span>
+          </div>
+
+          <ul class="card-list" id="publicationsList"></ul>
+        </div>
+      </section>
+
+      <!-- ============= Résumé (Experience & Education) ============= -->
+      <section id="experience">
+        <div class="container">
+          <header class="section-head">
+            <span class="eyebrow">Résumé</span>
+            <h2>Experience &amp; Education</h2>
+            <p>A timeline of my professional and academic journey.</p>
+          </header>
+
+          <div class="resume__split">
+            <div>
+              <h3><span data-icon="briefcase"></span> Experience</h3>
+              <ol class="timeline" id="experienceTimeline"></ol>
+            </div>
+            <div>
+              <h3><span data-icon="cap"></span> Education</h3>
+              <ol class="timeline" id="educationTimeline"></ol>
+            </div>
+          </div>
+
+          <div class="hero__actions" style="margin-top:2.5rem">
+            <a class="btn btn-primary" id="cvView" href="cv.html" target="_blank" rel="noopener">View CV</a>
+            <a class="btn btn-ghost" id="cvDownload" href="#" download><span data-icon="download"></span> Download CV</a>
+          </div>
+        </div>
+      </section>
+
       <!-- ============= Contact ============= -->
       <section id="contact">
         <div class="container">
           <header class="section-head">
             <span class="eyebrow">Contact</span>
-            <h2>Let's connect.</h2>
+            <h2>Let's connect</h2>
             <p>Get in touch to find out more about my work, or to discuss collaborations.</p>
           </header>
           <div class="contact-card">
             <div class="contact-card__text">
               <h3>Send me a message</h3>
-              <p>Easiest way to reach me is by email — I read everything.</p>
+              <p>Easiest way to reach me is by email.</p>
             </div>
             <div class="contact-card__actions">
               <a id="contactEmail" class="btn btn-primary" href="mailto:mail@saifsidhik.page">

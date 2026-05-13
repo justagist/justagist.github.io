@@ -16,15 +16,22 @@
       "Python API classes and utility functions to control the robot using MoveIt! and ROS Trajectory Action Service.",
       "The <a href=\"https://github.com/justagist/panda_simulator\" target=\"_blank\" rel=\"noopener\">panda_simulator</a> package (Gazebo-based simulator for the robot) can also be controlled using this package, providing almost complete sim-to-real transfer of code."
     ],
-    "tags": ["ROS", "Python", "Franka", "Robot Manipulator"],
+    "tags": [
+      "ROS",
+      "Python",
+      "Franka",
+      "Robot Manipulator"
+    ],
     "doi": {
       "id": "10.5281/zenodo.3747413",
       "url": "https://doi.org/10.5281/zenodo.3747413",
       "badge": "https://zenodo.org/badge/DOI/10.5281/zenodo.3747413.svg"
     },
     "links": [
-      { "label": "Code Repository", "url": "https://github.com/justagist/franka_ros_interface" },
-      { "label": "API Documentation", "url": "http://justagist.github.io/franka_ros_interface" }
+      {
+        "label": "API Documentation",
+        "url": "http://justagist.github.io/franka_ros_interface"
+      }
     ],
     "plainCite": "Saif Sidhik. (2020, April 10). \"franka_ros_interface: Controller and Interface API for Franka Emika Panda Robot Manipulator (Version v1.0.0)\". Zenodo. http://doi.org/10.5281/zenodo.3747413",
     "bibtex": "@software{saif_sidhik_2020_3747413,\n  author    = {Saif Sidhik},\n  title     = {{franka\\_ros\\_interface: Controller and Interface API for Franka Emika Panda Robot Manipulator}},\n  month     = apr,\n  year      = 2020,\n  publisher = {Zenodo},\n  version   = {v1.0.0},\n  doi       = {10.5281/zenodo.3747413},\n  url       = {https://doi.org/10.5281/zenodo.3747413}\n}"
@@ -45,17 +52,153 @@
       "The <a href=\"https://github.com/justagist/franka_ros_interface\" target=\"_blank\" rel=\"noopener\">Franka ROS Interface</a> package (which is a ROS interface for controlling the real Panda robot) can also be used with the panda_simulator, providing direct sim-to-real code transfer. The <a href=\"https://github.com/justagist/panda_robot\" target=\"_blank\" rel=\"noopener\">PandaRobot</a> package which provides simplified python API for the robot can also be used for direct sim-to-real code transfer, as well as for performing real-time kinematics and dynamics computation.",
       "Supports MoveIt planning and control for the robot arm and Franka Gripper."
     ],
-    "tags": ["Gazebo", "ROS", "Franka", "Simulation"],
+    "tags": [
+      "Gazebo",
+      "ROS",
+      "Franka",
+      "Simulation"
+    ],
     "doi": {
       "id": "10.5281/zenodo.3747459",
       "url": "https://doi.org/10.5281/zenodo.3747459",
       "badge": "https://zenodo.org/badge/DOI/10.5281/zenodo.3747459.svg"
     },
-    "links": [
-      { "label": "Code Repository", "url": "https://github.com/justagist/panda_simulator" }
-    ],
     "plainCite": "Saif Sidhik. (2020, April 10). panda_simulator: Gazebo simulator for Franka Emika Panda robot supporting sim-to-real code transfer (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.3747459",
     "bibtex": "@software{saif_sidhik_2020_3747459,\n  author    = {Saif Sidhik},\n  title     = {{panda\\_simulator: Gazebo simulator for Franka Emika Panda robot supporting sim-to-real code transfer}},\n  month     = apr,\n  year      = 2020,\n  publisher = {Zenodo},\n  version   = {v1.0.0},\n  doi       = {10.5281/zenodo.3747459},\n  url       = {https://doi.org/10.5281/zenodo.3747459}\n}"
+  },
+  {
+    "id": "pipercpp",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "Piper CPP",
+    "shortDescription": "A C++ SDK for the AgileX Piper 6-DOF arm with gripper. Includes a ros2_control hardware interface and MoveIt 2 configuration for the arm (and optional parallel-jaw gripper).",
+    "image": "https://media.githubusercontent.com/media/justagist/_assets/refs/heads/main/piper_cpp/piper_cpp.gif",
+    "video": "https://www.youtube.com/embed/JmN6HrzH_P8",
+    "description": "A standalone, pure C++ library for the AgileX Piper 6-DOF robot arm and its optional parallel-jaw gripper. Ships alongside a <code>ros2_control</code> hardware interface (<code>piper_cpp_ros</code>) that exposes position / velocity / effort state and position commands per arm joint (plus a 7th prismatic gripper joint when enabled), and a MoveIt 2 configuration (<code>piper_cpp_moveit</code>) for planning on the arm alone or arm + gripper together.",
+    "githubRepo": "justagist/piper_cpp",
+    "features": [
+      "Standalone pure C++ SDK for the AgileX Piper 6-DOF arm and gripper.",
+      "<code>ros2_control</code> hardware interface exposing per-joint position/velocity/effort state and position commands.",
+      "Optional 7th prismatic joint for the parallel-jaw gripper.",
+      "MoveIt 2 configuration for arm-only or arm + gripper planning."
+    ],
+    "tags": [
+      "C++",
+      "ROS 2",
+      "MoveIt 2",
+      "AgileX Piper",
+      "Manipulator"
+    ]
+  },
+  {
+    "id": "kinematicsinterfacepinocchio",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "kinematics_interface_pinocchio",
+    "image": "images/logo_full_white.png",
+    "shortDescription": "A Pinocchio-based ROS 2 Kinematics Interface plugin — a drop-in alternative to the default KDL plugin. Now upstreamed into the official ros-controls/kinematics_interface package.",
+    "description": "A <a href=\"https://github.com/stack-of-tasks/pinocchio\" target=\"_blank\" rel=\"noopener\">Pinocchio</a>-based implementation of the <a href=\"https://github.com/ros-controls/kinematics_interface\" target=\"_blank\" rel=\"noopener\">ROS 2 Kinematics Interface</a>. Drop-in replacement for the default KDL plugin, offering a different backend for forward and inverse kinematics. Now merged into and formally part of the official <a href=\"https://github.com/ros-controls/kinematics_interface\" target=\"_blank\" rel=\"noopener\">ros-controls/kinematics_interface</a> repo.",
+    "githubRepo": "justagist/kinematics_interface_pinocchio",
+    "features": [
+      "Pinocchio-based implementation of the ROS 2 <code>kinematics_interface</code>.",
+      "Same plugin interface as the default <code>kinematics_interface_kdl</code> — drop-in replacement.",
+      "Supports ROS 2 Humble, Jazzy and Rolling.",
+      "Available via apt: <code>ros-&lt;distro&gt;-kinematics-interface-pinocchio</code>.",
+      "Now part of the official <a href=\"https://github.com/ros-controls/kinematics_interface\" target=\"_blank\" rel=\"noopener\">ros-controls/kinematics_interface</a> package."
+    ],
+    "tags": [
+      "C++",
+      "ROS 2",
+      "Pinocchio",
+      "Kinematics",
+      "ros2_control"
+    ],
+    "links": [
+      {
+        "label": "Upstream (ros-controls)",
+        "url": "https://github.com/ros-controls/kinematics_interface"
+      }
+    ]
+  },
+  {
+    "id": "pybulletrobot",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "PyBullet Robot",
+    "shortDescription": "A general Python interface class for robot simulations using PyBullet. Provides a pybullet inverse kinematics interface supporting multi-end-effector targets and floating-base robots.",
+    "image": "images/pb_robot.png",
+    "description": "A general Python interface class for robot simulations using PyBullet. A pybullet inverse kinematics interface that can be used for getting joint position values when end-effector/link targets are provided. Supports multi-end-effector targets and floating-base robots. The robot can be directly controlled using position, velocity, or torque control of joints. Example implementations of task-space control (Impedance control, Hybrid force-motion control) using joint torque control is also available.",
+    "githubRepo": "justagist/pybullet_robot",
+    "tags": [
+      "Python",
+      "PyBullet",
+      "Simulation",
+      "Control"
+    ],
+    "links": [
+      {
+        "label": "Upstream (pypi)",
+        "url": "https://pypi.org/project/pybullet-robot/"
+      }
+    ]
+  },
+  {
+    "id": "pylasa",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "pyLasaDataset",
+    "shortDescription": "Python library for using the LASA Handwriting Dataset. Primarily used for creating baseline 2D trajectories for robot manipulation.",
+    "image": "images/lasa.png",
+    "description": "Python library for using the LASA Handwriting Dataset. Primarily used for creating baseline 2D trajectories for robot manipulation. Position and velocity trajectories that can be used for training and testing different learning and control framework for robot manipulators.",
+    "githubRepo": "justagist/pyLasaDataset",
+    "tags": [
+      "Python",
+      "Dataset",
+      "Trajectory"
+    ],
+    "links": [
+      {
+        "label": "Upstream (pypi)",
+        "url": "https://pypi.org/project/pyLasaDataset/"
+      }
+    ]
+  },
+  {
+    "id": "pyrcf",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "PyRCF",
+    "shortDescription": "A Python Robot Control Framework for quickly prototyping control algorithms for different robot embodiments.",
+    "image": "images/pyrcf.png",
+    "description": "A Python Robot Control Framework for quickly prototyping control algorithms for different tasks and robot embodiments (in simulation; not designed to be used on real systems). Primarily, this library provides an implementation of a typical control loop (via a MinimalCtrlLoop class), and defines interfaces for the components in a control loop that can be used directly in these control loop implementations. It also provides utility and debugging tools that will be useful for developing controllers and planners for different robots. This package also provides implementations of basic controllers and planners (and other components required to define a full control loop). In the long run, this package will also provide implementations of popular motion planners and controllers from literature and using existing libraries.",
+    "githubRepo": "justagist/pyrcf",
+    "tags": [
+      "Python",
+      "Control",
+      "Framework"
+    ],
+    "links": [
+      {
+        "label": "Upstream (pypi)",
+        "url": "https://pypi.org/project/pyrcf/"
+      }
+    ]
+  },
+  {
+    "id": "robot-gait-generator",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "robot_gait_generator",
+    "shortDescription": "A Python utility package that provides components for generating motion trajectories and control actions for different gaits for legged robots.",
+    "image": "images/robot-gait-generator.png",
+    "description": "This package provides components for generating motion trajectories and control actions for different gaits for legged robots. Primarily, this package provides an easy interface using Crocoddyl to define and generate different types of gaits for legged robots using high-level gait parameters such as step frequency, duty cycle, phase offset, and foot lift height.",
+    "githubRepo": "justagist/robot_gait_generator",
+    "tags": [
+      "Python",
+      "Legged Robots",
+      "Locomotion",
+      "Crocoddyl"
+    ]
   },
   {
     "id": "pandarobot",
@@ -75,66 +218,40 @@
       "Manage frames transformation and controller switching using simple utility functions.",
       "Works directly on simulated robot when using <a href=\"https://github.com/justagist/panda_simulator\" target=\"_blank\" rel=\"noopener\">panda_simulator</a> providing direct sim-to-real and real-to-sim code transfer."
     ],
-    "tags": ["Python", "ROS", "Franka", "Kinematics"],
+    "tags": [
+      "Python",
+      "ROS",
+      "Franka",
+      "Kinematics"
+    ],
     "links": [
-      { "label": "Code Repository", "url": "https://github.com/justagist/panda_robot" },
-      { "label": "API Documentation", "url": "http://justagist.github.io/panda_robot" }
+      {
+        "label": "API Documentation",
+        "url": "http://justagist.github.io/panda_robot"
+      }
     ]
   },
   {
-    "id": "pybulletrobot",
+    "id": "rvizlightdisplay",
     "category": "library",
     "categoryLabel": "Open Source Library",
-    "title": "PyBullet Robot",
-    "shortDescription": "A general Python interface class for robot simulations using PyBullet. Provides a pybullet inverse kinematics interface supporting multi-end-effector targets and floating-base robots.",
-    "image": "images/pb_robot.png",
-    "description": "A general Python interface class for robot simulations using PyBullet. A pybullet inverse kinematics interface that can be used for getting joint position values when end-effector/link targets are provided. Supports multi-end-effector targets and floating-base robots. The robot can be directly controlled using position, velocity, or torque control of joints. Example implementations of task-space control (Impedance control, Hybrid force-motion control) using joint torque control is also available.",
-    "githubRepo": "justagist/pybullet_robot",
-    "tags": ["Python", "PyBullet", "Simulation", "Control"],
-    "links": [
-      { "label": "Code Repository", "url": "https://github.com/justagist/pybullet_robot" }
-    ]
-  },
-  {
-    "id": "pylasa",
-    "category": "library",
-    "categoryLabel": "Open Source Library",
-    "title": "pyLasaDataset",
-    "shortDescription": "Python library for using the LASA Handwriting Dataset. Primarily used for creating baseline 2D trajectories for robot manipulation.",
-    "image": "images/lasa.png",
-    "description": "Python library for using the LASA Handwriting Dataset. Primarily used for creating baseline 2D trajectories for robot manipulation. Position and velocity trajectories that can be used for training and testing different learning and control framework for robot manipulators.",
-    "githubRepo": "justagist/pyLasaDataset",
-    "tags": ["Python", "Dataset", "Trajectory"],
-    "links": [
-      { "label": "Code Repository", "url": "https://github.com/justagist/pyLasaDataset" }
-    ]
-  },
-  {
-    "id": "pyrcf",
-    "category": "library",
-    "categoryLabel": "Open Source Library",
-    "title": "PyRCF",
-    "shortDescription": "A Python Robot Control Framework for quickly prototyping control algorithms for different robot embodiments.",
-    "image": "images/pyrcf.png",
-    "description": "A Python Robot Control Framework for quickly prototyping control algorithms for different tasks and robot embodiments (in simulation; not designed to be used on real systems). Primarily, this library provides an implementation of a typical control loop (via a MinimalCtrlLoop class), and defines interfaces for the components in a control loop that can be used directly in these control loop implementations. It also provides utility and debugging tools that will be useful for developing controllers and planners for different robots. This package also provides implementations of basic controllers and planners (and other components required to define a full control loop). In the long run, this package will also provide implementations of popular motion planners and controllers from literature and using existing libraries.",
-    "githubRepo": "justagist/pyrcf",
-    "tags": ["Python", "Control", "Framework"],
-    "links": [
-      { "label": "Code Repository", "url": "https://github.com/justagist/pyrcf" }
-    ]
-  },
-  {
-    "id": "robot-gait-generator",
-    "category": "library",
-    "categoryLabel": "Open Source Library",
-    "title": "robot_gait_generator",
-    "shortDescription": "A Python utility package that provides components for generating motion trajectories and control actions for different gaits for legged robots.",
-    "image": "images/robot-gait-generator.png",
-    "description": "This package provides components for generating motion trajectories and control actions for different gaits for legged robots. Primarily, this package provides an easy interface using Crocoddyl to define and generate different types of gaits for legged robots using high-level gait parameters such as step frequency, duty cycle, phase offset, and foot lift height.",
-    "githubRepo": "justagist/robot_gait_generator",
-    "tags": ["Python", "Legged Robots", "Locomotion", "Crocoddyl"],
-    "links": [
-      { "label": "Code Repository", "url": "https://github.com/justagist/robot_gait_generator" }
+    "title": "rviz_light_display",
+    "shortDescription": "A self-contained rviz2 display plugin for status lights. Configurable shape, pose and default colour, with runtime colour / brightness updates over a custom ROS 2 message.",
+    "image": "https://media.githubusercontent.com/media/justagist/_assets/refs/heads/main/rviz_light_display/rviz_light_display.gif",
+    "description": "<code>rviz_light_display</code> is a self-contained rviz2 display plugin for status lights. Each instance stores a TF frame, a pose relative to it, a visual shape (sphere, cylinder, cube or cone), sizing, off-state appearance, and a default rgba value used before any runtime colour is received. Runtime updates only need to publish a <code>rviz_light_display/msg/LightCommand</code> message — brightness controls OFF / dim / ON, and the <code>keep_color</code> flag decides whether to apply or reuse the active colour.",
+    "githubRepo": "justagist/rviz_light_display",
+    "features": [
+      "Configurable shape: sphere, cylinder, cube or cone.",
+      "Per-instance TF frame, pose, sizing and default rgba — applied immediately before any runtime update.",
+      "Runtime updates via a custom <code>LightCommand</code> message (color, brightness, keep_color).",
+      "Brightness-driven OFF / dim / ON — no separate enable flag.",
+      "Self-contained rviz2 plugin written in C++."
+    ],
+    "tags": [
+      "C++",
+      "ROS 2",
+      "RViz",
+      "Plugin"
     ]
   },
   {
@@ -146,10 +263,22 @@
     "image": "images/gslam.png",
     "video": "https://www.youtube.com/embed/gfz0dfJCWEU",
     "description": "Graph-Based Simultaneous Localisation and Mapping (SLAM) on a 6-DoF Aerial Robot Using Monocular Camera. My MSc Robotics dissertation at the University of Birmingham.",
-    "tags": ["SLAM", "Computer Vision", "Aerial Robotics", "MSc Thesis"],
+    "tags": [
+      "SLAM",
+      "Computer Vision",
+      "Aerial Robotics",
+      "MSc Thesis",
+      "C++"
+    ],
     "links": [
-      { "label": "Read Thesis", "url": "http://docs.google.com/gview?url=https://github.com/justagist/monocular_visual_graph_slam/raw/master/thesis.pdf" },
-      { "label": "Code Repository", "url": "https://github.com/justagist/monocular_visual_graph_slam" }
+      {
+        "label": "Read Thesis",
+        "url": "http://docs.google.com/gview?url=https://github.com/justagist/monocular_visual_graph_slam/raw/master/thesis.pdf"
+      },
+      {
+        "label": "Code Repository",
+        "url": "https://github.com/justagist/monocular_visual_graph_slam"
+      }
     ]
   },
   {
@@ -161,11 +290,25 @@
     "image": "images/visodo.png",
     "video": "https://www.youtube.com/embed/TxMpHycdhc0",
     "description": "MSc Summer Mini-Project — implemented a visual odometry pipeline and a high-level PID controller for an aerial robot (Parrot AR Drone).",
-    "tags": ["Visual Odometry", "Aerial Robotics", "PID Control"],
+    "tags": [
+      "Visual Odometry",
+      "Aerial Robotics",
+      "PID Control",
+      "Python"
+    ],
     "links": [
-      { "label": "Drone Controller Code", "url": "https://github.com/justagist/pid_control_ardrone" },
-      { "label": "Visual Odometry Code", "url": "https://github.com/justagist/VisualOdometry_miniproject" },
-      { "label": "Read Report", "url": "http://docs.google.com/gview?url=https://github.com/justagist/VisualOdometry_miniproject/raw/master/project_report.pdf" }
+      {
+        "label": "Drone Controller Code",
+        "url": "https://github.com/justagist/pid_control_ardrone"
+      },
+      {
+        "label": "Visual Odometry Code",
+        "url": "https://github.com/justagist/VisualOdometry_miniproject"
+      },
+      {
+        "label": "Read Report",
+        "url": "http://docs.google.com/gview?url=https://github.com/justagist/VisualOdometry_miniproject/raw/master/project_report.pdf"
+      }
     ]
   },
   {
@@ -177,9 +320,16 @@
     "image": "images/penny.png",
     "video": "https://www.youtube.com/embed/WaB6lJtbGDM",
     "description": "MSc Intelligent Robotics Group Project: \"Penny, the Security Guard Robot\". Built as part of the MSc Intelligent Robotics module at the University of Birmingham.",
-    "tags": ["Mobile Robotics", "ROS", "Group Project"],
+    "tags": [
+      "Mobile Robotics",
+      "ROS",
+      "Group Project"
+    ],
     "links": [
-      { "label": "Visit Project Website", "url": "http://www.cs.bham.ac.uk/internal/courses/int-robot/halloffame/2016/Penny/" }
+      {
+        "label": "Visit Project Website",
+        "url": "http://www.cs.bham.ac.uk/internal/courses/int-robot/halloffame/2016/Penny/"
+      }
     ]
   }
 ]
