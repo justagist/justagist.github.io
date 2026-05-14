@@ -456,6 +456,13 @@ section {
   background: var(--color-surface);
   aspect-ratio: 1;
   max-width: 280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 819px) {
+  .about__avatar {
+    max-width: 200px;
+  }
 }
 
 .about__avatar img {
@@ -604,10 +611,47 @@ section {
   font: inherit;
 }
 
-@media (max-width: 540px) {
+/* Mobile: thumb + tags + chevron on row 1; title/authors/subtitle each
+   span the full width on rows below. Tags wrap up to ~2 lines and clip. */
+@media (max-width: 640px) {
+  .card__header {
+    grid-template-columns: 72px 1fr auto;
+    column-gap: 0.85rem;
+    row-gap: 0.45rem;
+    align-items: start;
+  }
+  .card__head-text { display: contents; }
+  .card__thumb {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+  .card__meta {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    margin-bottom: 0;
+    max-height: calc(2 * 1.7rem); /* ~2 lines, then clipped */
+    overflow: hidden;
+  }
+  .card__chevron {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+  }
+  /* Full-width rows below — auto-flow places them in row order. */
+  .card__title,
+  .card__authors,
+  .card__sub {
+    grid-column: 1 / -1;
+  }
+  .card__title { margin-top: 0.15rem; }
+}
+
+@media (max-width: 420px) {
   .card__header {
     grid-template-columns: 64px 1fr auto;
-    gap: 0.75rem;
+    column-gap: 0.7rem;
   }
 }
 

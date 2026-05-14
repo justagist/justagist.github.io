@@ -231,7 +231,7 @@
       )}" data-type="${escapeHtml(pub.type || "")}" data-year="${escapeHtml(String(pub.year || ""))}">
         <button class="card__header" aria-expanded="false" aria-controls="${id}-body">
           <div class="card__thumb">${pub.image ? `<img src="${escapeHtml(pub.image)}" alt="" loading="lazy" />` : ""}</div>
-          <div>
+          <div class="card__head-text">
             <div class="card__meta">${tags}</div>
             <h3 class="card__title">${escapeHtml(pub.title)}</h3>
             <p class="card__authors">${escapeHtml(pub.authors || "")}</p>
@@ -276,7 +276,7 @@
       )}" data-category="${escapeHtml(proj.category || "")}">
         <button class="card__header" aria-expanded="false" aria-controls="${id}-body">
           <div class="card__thumb">${proj.image ? `<img src="${escapeHtml(proj.image)}" alt="" loading="lazy" />` : ""}</div>
-          <div>
+          <div class="card__head-text">
             <div class="card__meta">${tags}</div>
             <h3 class="card__title">${escapeHtml(proj.title)}</h3>
             <p class="card__sub">${escapeHtml(proj.shortDescription || "")}</p>
