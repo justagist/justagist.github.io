@@ -1,5 +1,5 @@
 /* ============================================================
-   Saif Sidhik — Personal Site
+   Saif Sidhik - Personal Site
    App entry: load JSON data, render sections, wire up UI.
    ============================================================ */
 
@@ -98,7 +98,7 @@
 
   // ---------- Render: head / meta ----------
   function renderHead(profile) {
-    document.title = `${profile.name} — ${profile.tagline.split("·")[0].trim()}`;
+    document.title = `${profile.name} - ${profile.tagline.split("·")[0].trim()}`;
 
     const descMeta = $('meta[name="description"]');
     if (descMeta) descMeta.setAttribute("content", profile.metaDescription);
@@ -350,7 +350,7 @@
   // ---------- Render: projects ----------
   function renderProjects(projects) {
     // Group by category but render all in one list with filterable category
-    const order = { library: 0, academic: 1 };
+    const order = { app: 0, library: 1, academic: 2 };
     projects = projects.slice().sort((a, b) => {
       const oa = order[a.category] ?? 9;
       const ob = order[b.category] ?? 9;
@@ -368,7 +368,10 @@
       categories
         .map((c) => {
           const label =
-            c === "library" ? "Open Source" : c === "academic" ? "Academic" : c;
+            c === "library" ? "Open Source"
+            : c === "academic" ? "Academic"
+            : c === "app" ? "Side Projects"
+            : c;
           return `<button class="chip" data-filter="category:${escapeHtml(c)}" data-target="projects">${escapeHtml(label)}</button>`;
         })
         .join("");
@@ -502,7 +505,7 @@
             }, 1600);
           },
           () => {
-            alert("Copy failed — please copy manually.");
+            alert("Copy failed - please copy manually.");
           }
         );
       }

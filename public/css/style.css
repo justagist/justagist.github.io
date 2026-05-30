@@ -1,5 +1,5 @@
 /* ============================================================
-   Saif Sidhik — Personal Site
+   Saif Sidhik - Personal Site
    Modern, minimal, dark/light themeable
    ============================================================ */
 
@@ -74,7 +74,7 @@ code, pre {
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.06);
 
-  /* Light (default) — your original crimson on a warm-neutral light surface */
+  /* Light (default) - your original crimson on a warm-neutral light surface */
   --color-bg: #fafafa;
   --color-bg-elev: #ffffff;
   --color-surface: #ffffff;
@@ -639,7 +639,7 @@ section {
     grid-row: 1;
     align-self: center;
   }
-  /* Full-width rows below — auto-flow places them in row order. */
+  /* Full-width rows below - auto-flow places them in row order. */
   .card__title,
   .card__authors,
   .card__sub {

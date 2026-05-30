@@ -1,21 +1,21 @@
 [
   {
     "degree": "PhD in Robotics (Computer Science)",
-    "period": "2017 — 2021",
+    "period": "2017 - 2021",
     "institution": "University of Birmingham, UK",
     "institutionUrl": "http://www.cs.bham.ac.uk",
     "description": "For my research thesis, I worked on developing a control and learning framework for enabling a robot to perform changing-contact manipulation tasks, using different machine learning (RL, SL, Deep) techniques and robot dynamics/control strategies. <a href=\"https://phdthesis.saifsidhik.page\" target=\"_blank\" rel=\"noopener\">Read thesis.</a>"
   },
   {
     "degree": "MSc Robotics",
-    "period": "Sept 2016 — Sept 2017",
+    "period": "Sept 2016 - Sept 2017",
     "institution": "University of Birmingham, UK",
     "institutionUrl": "http://www.cs.bham.ac.uk",
     "description": "Covered courses in Intelligent Robotics, Robot Kinematics, Dynamics & Control, Machine Learning, Neural Computation and Computer Vision."
   },
   {
     "degree": "BTech Mechanical Engineering",
-    "period": "Sept 2012 — May 2016",
+    "period": "Sept 2012 - May 2016",
     "institution": "TKM College of Engineering, India",
     "institutionUrl": "https://tkmce.ac.in",
     "description": "Covered subjects including Mechatronics, Computer-Aided-Designing (Mechanical), Creativity and Product Development, Machine Tools, Fluid Mechanics, IC Engines, Design of Machine Elements, Thermal Engineering, and Mechanics of Machinery."

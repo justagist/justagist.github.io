@@ -2,7 +2,7 @@
   "name": "Saif Sidhik",
   "shortName": "Saif",
   "tagline": "Robotics & Control · Machine Learning · Manipulation · Locomotion",
-  "lede": "I'm a robotics engineer with experience across model-based control, machine learning, and task-level behaviour design for building robots that work reliably alongside humans — from warehouse automation to in-home manipulation.",
+  "lede": "I'm a robotics engineer with experience across model-based control, machine learning, and task-level behaviour design for building robots that work reliably alongside humans - from warehouse automation to in-home manipulation.",
   "roles": [
     "Robotics & Control",
     "Machine Learning",
@@ -30,7 +30,7 @@
     "downloadUrl": "https://www.dropbox.com/s/gb2y9fkrzq0gc7s/cv_sidhik.pdf?dl=1"
   },
   "footer": {
-    "copyright": "© Saif Sidhik 2021 — 2025."
+    "copyright": "© Saif Sidhik 2021 - 2025."
   },
   "analytics": {
     "gtagId": "UA-160751137-2",

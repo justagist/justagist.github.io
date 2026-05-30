@@ -96,12 +96,12 @@
     "categoryLabel": "Open Source Library",
     "title": "kinematics_interface_pinocchio",
     "image": "images/logo_full_white.png",
-    "shortDescription": "A Pinocchio-based ROS 2 Kinematics Interface plugin — a drop-in alternative to the default KDL plugin. Now upstreamed into the official ros-controls/kinematics_interface package.",
+    "shortDescription": "A Pinocchio-based ROS 2 Kinematics Interface plugin - a drop-in alternative to the default KDL plugin. Now upstreamed into the official ros-controls/kinematics_interface package.",
     "description": "A <a href=\"https://github.com/stack-of-tasks/pinocchio\" target=\"_blank\" rel=\"noopener\">Pinocchio</a>-based implementation of the <a href=\"https://github.com/ros-controls/kinematics_interface\" target=\"_blank\" rel=\"noopener\">ROS 2 Kinematics Interface</a>. Drop-in replacement for the default KDL plugin, offering a different backend for forward and inverse kinematics. Now merged into and formally part of the official <a href=\"https://github.com/ros-controls/kinematics_interface\" target=\"_blank\" rel=\"noopener\">ros-controls/kinematics_interface</a> repo.",
     "githubRepo": "justagist/kinematics_interface_pinocchio",
     "features": [
       "Pinocchio-based implementation of the ROS 2 <code>kinematics_interface</code>.",
-      "Same plugin interface as the default <code>kinematics_interface_kdl</code> — drop-in replacement.",
+      "Same plugin interface as the default <code>kinematics_interface_kdl</code> - drop-in replacement.",
       "Supports ROS 2 Humble, Jazzy and Rolling.",
       "Available via apt: <code>ros-&lt;distro&gt;-kinematics-interface-pinocchio</code>.",
       "Now part of the official <a href=\"https://github.com/ros-controls/kinematics_interface\" target=\"_blank\" rel=\"noopener\">ros-controls/kinematics_interface</a> package."
@@ -232,19 +232,50 @@
     ]
   },
   {
+    "id": "knightschool",
+    "category": "app",
+    "categoryLabel": "Side Project",
+    "title": "KnightSchool",
+    "shortDescription": "A backend-less chess learning PWA - Stockfish analysis, Lichess study drills, an AI chess assistant (\"Elle\"), and a weekly practice plan. Runs entirely in the browser, on any device.",
+    "image": "https://raw.githubusercontent.com/justagist/knight_school/main/docs/screenshots/analyze-light.png",
+    "description": "A client-side chess learning PWA. Analyse your own games with Stockfish (move-by-move evaluation, classification, eval graph, guess-the-move mode), drill openings from Lichess studies, chat with <b>Elle</b> - an AI chess assistant - and follow a weekly practice plan toward a goal. Everything runs in your browser: no backend, no auth, no telemetry. Bring your own LLM API key. (Almost) entirely vibe-coded with <a href=\"https://claude.com/claude-code\" target=\"_blank\" rel=\"noopener\">Claude Code</a>.",
+    "githubRepo": "justagist/knight_school",
+    "features": [
+      "<b>Analyse</b> - paste a PGN, get Stockfish eval per move, top engine lines, move classifications, and an eval graph. Guess-the-move mode for self-testing.",
+      "<b>Elle</b> - friendly AI chess assistant: comments on moves, answers questions, drill-aware with invalidation prompts.",
+      "<b>Study</b> - import Lichess Studies, drill chapter lines, pull master-game stats from the Lichess Opening Explorer.",
+      "<b>Plan</b> - set a goal in plain text; get a fixed weekly template (drills / analyses / lesson / guess review / daily puzzle) with a rolling daily checklist.",
+      "Installable PWA, fully client-side, offline-capable."
+    ],
+    "tags": [
+      "TypeScript",
+      "PWA",
+      "Chess",
+      "Stockfish",
+      "LLM",
+      "Open Source"
+    ],
+    "links": [
+      {
+        "label": "Live App",
+        "url": "https://knight-school.pages.dev/"
+      }
+    ]
+  },
+  {
     "id": "rvizlightdisplay",
     "category": "library",
     "categoryLabel": "Open Source Library",
     "title": "rviz_light_display",
     "shortDescription": "A self-contained rviz2 display plugin for status lights. Configurable shape, pose and default colour, with runtime colour / brightness updates over a custom ROS 2 message.",
     "image": "https://media.githubusercontent.com/media/justagist/_assets/refs/heads/main/rviz_light_display/rviz_light_display.gif",
-    "description": "<code>rviz_light_display</code> is a self-contained rviz2 display plugin for status lights. Each instance stores a TF frame, a pose relative to it, a visual shape (sphere, cylinder, cube or cone), sizing, off-state appearance, and a default rgba value used before any runtime colour is received. Runtime updates only need to publish a <code>rviz_light_display/msg/LightCommand</code> message — brightness controls OFF / dim / ON, and the <code>keep_color</code> flag decides whether to apply or reuse the active colour.",
+    "description": "<code>rviz_light_display</code> is a self-contained rviz2 display plugin for status lights. Each instance stores a TF frame, a pose relative to it, a visual shape (sphere, cylinder, cube or cone), sizing, off-state appearance, and a default rgba value used before any runtime colour is received. Runtime updates only need to publish a <code>rviz_light_display/msg/LightCommand</code> message - brightness controls OFF / dim / ON, and the <code>keep_color</code> flag decides whether to apply or reuse the active colour.",
     "githubRepo": "justagist/rviz_light_display",
     "features": [
       "Configurable shape: sphere, cylinder, cube or cone.",
-      "Per-instance TF frame, pose, sizing and default rgba — applied immediately before any runtime update.",
+      "Per-instance TF frame, pose, sizing and default rgba - applied immediately before any runtime update.",
       "Runtime updates via a custom <code>LightCommand</code> message (color, brightness, keep_color).",
-      "Brightness-driven OFF / dim / ON — no separate enable flag.",
+      "Brightness-driven OFF / dim / ON - no separate enable flag.",
       "Self-contained rviz2 plugin written in C++."
     ],
     "tags": [
@@ -289,7 +320,7 @@
     "shortDescription": "MSc Summer Mini-Project on Visual Odometry and high-level control for an aerial robot.",
     "image": "images/visodo.png",
     "video": "https://www.youtube.com/embed/TxMpHycdhc0",
-    "description": "MSc Summer Mini-Project — implemented a visual odometry pipeline and a high-level PID controller for an aerial robot (Parrot AR Drone).",
+    "description": "MSc Summer Mini-Project - implemented a visual odometry pipeline and a high-level PID controller for an aerial robot (Parrot AR Drone).",
     "tags": [
       "Visual Odometry",
       "Aerial Robotics",
@@ -316,7 +347,7 @@
     "category": "academic",
     "categoryLabel": "Academic Project",
     "title": "Penny, the Security Guard Robot",
-    "shortDescription": "MSc Intelligent Robotics Group Project — a security guard robot built as part of an MSc group project.",
+    "shortDescription": "MSc Intelligent Robotics Group Project - a security guard robot built as part of an MSc group project.",
     "image": "images/penny.png",
     "video": "https://www.youtube.com/embed/WaB6lJtbGDM",
     "description": "MSc Intelligent Robotics Group Project: \"Penny, the Security Guard Robot\". Built as part of the MSc Intelligent Robotics module at the University of Birmingham.",
