@@ -143,6 +143,36 @@
     ]
   },
   {
+    "id": "mujocorobot",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "MuJoCo Robot",
+    "shortDescription": "A general Python interface for robot simulations using MuJoCo.",
+    "image": "https://media.githubusercontent.com/media/justagist/_assets/refs/heads/main/mujoco_robot/mujoco_robot_tsctrl.gif",
+    "description": "A general Python interface for robot simulations using <a href=\"https://mujoco.org\" target=\"_blank\" rel=\"noopener\">MuJoCo</a>. Its public API mirrors the <a href=\"https://github.com/justagist/pybullet_robot\" target=\"_blank\" rel=\"noopener\">pybullet_robot</a> package so that controllers written against that backend can be run here with minimal changes. <code>MujocoRobot</code> is a single object to load, introspect, control, and read state from a robot, implemented directly on MuJoCo's <code>MjModel</code> + <code>MjData</code>.",
+    "githubRepo": "justagist/mujoco_robot",
+    "features": [
+      "Load an MJCF/URDF file or wrap an existing <code>(model, data)</code>; assemble a world (ground, light, props, force-torque sensors) with <code>MjSpec</code> helpers.",
+      "Introspection: name&lt;-&gt;id maps for bodies, joints, actuators, sites, geoms and sensors, with per-joint <code>qpos</code>/<code>dof</code> addressing.",
+      "Full state access: joint, base and link/site pose and velocity, geometric Jacobian, gravity-compensation torques, and a <code>get_robot_states</code> snapshot.",
+      "Position control via the model's actuators, and torque/impedance control via <code>data.qfrc_applied</code>, with a PVT-PD command and position/torque mode switching.",
+      "Contact and force-torque sensing, plus cosmetics / domain-randomisation helpers.",
+      "Inverse kinematics: <code>differential_ik</code> for a single frame, and <a href=\"https://github.com/kevinzakka/mink\" target=\"_blank\" rel=\"noopener\">mink</a> for whole-body IK (optional)."
+    ],
+    "tags": [
+      "Python",
+      "MuJoCo",
+      "Simulation",
+      "Control"
+    ],
+    "links": [
+      {
+        "label": "Upstream (pypi)",
+        "url": "https://pypi.org/project/mujoco-robot/"
+      }
+    ]
+  },
+  {
     "id": "pylasa",
     "category": "library",
     "categoryLabel": "Open Source Library",
