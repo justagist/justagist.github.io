@@ -91,6 +91,36 @@
     ]
   },
   {
+    "id": "justblend",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "justblend",
+    "shortDescription": "Closed-form N-dimensional trajectory generator with velocity/acceleration/jerk limiting and smooth corner blends. C++17 library with Python bindings.",
+    "image": "https://raw.githubusercontent.com/justagist/justblend/main/docs/blending.png",
+    "description": "Closed-form N-dimensional trajectory generation with smooth corner blends. General-purpose: joint trajectories, Cartesian paths, CNC tool paths, animation curves; anywhere you have a list of points in some D-dimensional space and want a velocity/acceleration/jerk-limited smooth trajectory through them. No optimisation loop, no discretisation: typical multi-waypoint problems generate in roughly 0.05-0.1 ms, matching <a href=\"https://github.com/pantor/ruckig\" target=\"_blank\" rel=\"noopener\">ruckig</a>'s per-segment time-optimal durations on polyline motions. The output trajectory is lazy: it owns a list of analytic segments and can be sampled at any time without precomputing a dense buffer.",
+    "githubRepo": "justagist/justblend",
+    "features": [
+      "Closed form, microsecond generation: no optimisation loop, no discretisation.",
+      "Two velocity profiles: bang-bang trapezoidal for the fastest rest-to-rest motion, or 7-phase jerk-limited S-curve when jerk limits are given.",
+      "Three corner modes: stop at every waypoint, blend through corners, or a hybrid that blends where feasible. The cubic-Hermite blend has zero acceleration at its boundaries, so an S-curve trajectory stays jerk-limited through the corner.",
+      "Analytic guarantees: limits are satisfied by construction; corner-cut deviation and per-waypoint passage times come back in closed form.",
+      "Boundary speeds and duration stretching for moving-start replanning and speed control.",
+      "C++17 static library with clean CMake exports; pybind11 bindings with type stubs."
+    ],
+    "tags": [
+      "C++",
+      "Python",
+      "Trajectory Generation",
+      "Motion Planning"
+    ],
+    "links": [
+      {
+        "label": "Upstream (pypi)",
+        "url": "https://pypi.org/project/justblend/"
+      }
+    ]
+  },
+  {
     "id": "kinematicsinterfacepinocchio",
     "category": "library",
     "categoryLabel": "Open Source Library",

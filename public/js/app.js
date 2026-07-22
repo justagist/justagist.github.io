@@ -350,7 +350,7 @@
   // ---------- Render: projects ----------
   function renderProjects(projects) {
     // Group by category but render all in one list with filterable category
-    const order = { app: 0, library: 1, academic: 2 };
+    const order = { library: 0, academic: 1, app: 2 };
     projects = projects.slice().sort((a, b) => {
       const oa = order[a.category] ?? 9;
       const ob = order[b.category] ?? 9;
