@@ -91,6 +91,40 @@
     ]
   },
   {
+    "id": "roschema",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "roschema",
+    "shortDescription": "Catch breaking ROS 2 interface changes in the PR, not on the robot. Breaking-change detection, lint, and fmt for .msg/.srv/.action files, with zero ROS dependencies.",
+    "image": "https://raw.githubusercontent.com/justagist/_assets/main/roschema/roschema_demo.png",
+    "description": "Catch breaking ROS 2 interface changes in the PR, not on the robot. <code>roschema</code> detects breaking changes, lints and formats ROS 2 interface definitions (<code>.msg</code>, <code>.srv</code>, <code>.action</code>) with zero ROS dependencies, so it runs in a bare CI container. CDR serialisation is positional, so adding, removing, reordering or retyping a field is wire-breaking even when your code still compiles; roschema's structural taxonomy reports these before they reach a robot.",
+    "githubRepo": "justagist/roschema",
+    "features": [
+      "Breaking-change gate for PRs: compare the working tree against a git ref, a directory, an MCAP bag, or a lockfile baseline.",
+      "Structural taxonomy of changes with configurable strictness, down to wire-level-only breaks.",
+      "Lint and format commands (<code>roschema lint</code>, <code>roschema fmt --check</code>) for style, naming and CI formatting gates.",
+      "<code>freeze</code> writes a sha256-verified lockfile so release tarballs can carry their own baseline without git.",
+      "<code>bag-check</code> verifies a recorded MCAP bag is still compatible with the installed interfaces.",
+      "Zero ROS dependencies (Python 3.10+), machine-readable JSON output, and a ready-made GitHub Action."
+    ],
+    "tags": [
+      "Python",
+      "ROS 2",
+      "CI",
+      "Tooling"
+    ],
+    "links": [
+      {
+        "label": "Upstream (pypi)",
+        "url": "https://pypi.org/project/roschema/"
+      },
+      {
+        "label": "Rule Reference",
+        "url": "https://github.com/justagist/roschema/blob/main/docs/rules.md"
+      }
+    ]
+  },
+  {
     "id": "justblend",
     "category": "library",
     "categoryLabel": "Open Source Library",
