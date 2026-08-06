@@ -91,6 +91,45 @@
     ]
   },
   {
+    "id": "ros2httpgateway",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "ROS 2 HTTP Gateway",
+    "shortDescription": "A YAML file in, an authenticated HTTP API out. Exposes exactly the ROS 2 topics, services and actions you name over HTTP + SSE, with per-endpoint roles, state-based preconditions, audit logging and a generated OpenAPI 3.1 document.",
+    "image": "https://raw.githubusercontent.com/justagist/ros2_http_gateway/main/docs/console.png",
+    "description": "A YAML file in, an authenticated HTTP API out: no code to write, no client to build. One config file decides exactly which ROS 2 topics, services and actions are reachable over HTTP, and nothing is exposed unless you name it. Where <code>rosbridge_suite</code> publishes the whole graph over a custom WebSocket protocol behind (at best) a shared secret, this gateway serves plain HTTP + SSE described by an OpenAPI 3.1 document, with per-token identity, per-endpoint roles, authorisation gated on live robot state, and one JSON audit line per authenticated request. <code>--check</code> resolves every interface type and validates every precondition field against the real message definition without a running system, so a config can be gated in CI.",
+    "githubRepo": "justagist/ros2_http_gateway",
+    "features": [
+      "Config-driven surface: topics, services and actions become HTTP endpoints straight from YAML, with staleness flags, timeouts and capacity limits per endpoint.",
+      "Per-token identity with per-endpoint roles, plus preconditions that gate a call on live state published by another endpoint.",
+      "Server-sent event streams for topics and action feedback, with sequence numbers, heartbeats and a slow-consumer policy.",
+      "Generated OpenAPI 3.1 document and interactive docs, so clients are generated rather than hand-written.",
+      "A built-in test console rendered entirely from the config: token wallet, per-endpoint auth matrix, schema-driven forms, live topic tiles and action goal cards.",
+      "<code>--check</code> validates a config offline (or <code>--online</code> against the live graph) as a CI gate, and every authenticated request writes a JSON audit line.",
+      "Python 3.10+ on Starlette and uvicorn, mypy strict, supporting ROS 2 Humble, Jazzy, Kilted, Lyrical and Rolling."
+    ],
+    "tags": [
+      "Python",
+      "ROS 2",
+      "HTTP API",
+      "Security"
+    ],
+    "links": [
+      {
+        "label": "Upstream (pypi)",
+        "url": "https://pypi.org/project/ros2-http-gateway/"
+      },
+      {
+        "label": "Configuration Guide",
+        "url": "https://github.com/justagist/ros2_http_gateway/blob/main/docs/configuration.md"
+      },
+      {
+        "label": "Security Model",
+        "url": "https://github.com/justagist/ros2_http_gateway/blob/main/docs/security.md"
+      }
+    ]
+  },
+  {
     "id": "roschema",
     "category": "library",
     "categoryLabel": "Open Source Library",
