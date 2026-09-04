@@ -18,6 +18,24 @@
     "bibtex": "@article{SIDHIK2024104785,\n  title   = {An adaptive framework for trajectory following in changing-contact robot manipulation tasks},\n  journal = {Robotics and Autonomous Systems},\n  pages   = {104785},\n  year    = {2024},\n  issn    = {0921-8890},\n  doi     = {https://doi.org/10.1016/j.robot.2024.104785},\n  url     = {https://www.sciencedirect.com/science/article/pii/S0921889024001696},\n  author  = {Saif Sidhik and Mohan Sridharan and Dirk Ruiken},\n  keywords = {Robot manipulation tasks, Discontinuous interaction dynamics, Variable impedance control, Adaptive control}\n}"
   },
   {
+    "id": "phdthesis",
+    "type": "thesis",
+    "typeLabel": "Thesis",
+    "year": 2022,
+    "authors": "S. Sidhik",
+    "title": "An Adaptive Framework for Changing-Contact Robot Manipulation",
+    "venue": "PhD Thesis, School of Computer Science, University of Birmingham, UK.",
+    "image": "images/frameworkimg.png",
+    "abstract": "Many robot manipulation tasks require the robot to make and break contact with other objects in the environment. The interaction dynamics of such tasks vary markedly before and after contact. They are also strongly influenced by the nature and physical properties of the objects involved, i.e., by factors such as type of contact, surface friction, and applied force. Many industrial assembly tasks and human manipulation tasks, e.g., peg insertion, stacking, and screwing, are instances of such 'changing-contact' manipulation tasks. In such tasks, the interaction dynamics is discontinuous when the robot makes or breaks contact but smooth at other times, making it a piecewise continuous dynamical system. The discontinuities experienced by a robot during such tasks can be harmful to the robot and/or object. Designing a framework for smooth online control of changing-contact manipulation tasks is a challenging open problem. This thesis focuses on the relatively less-explored plan execution part of the problem in the context of changing-contact manipulation tasks. It does so by developing an adaptive, task-space, hybrid control framework that enables efficient, smooth, and accurate following of any given motion trajectory in the presence of piecewise continuous interaction dynamics. The framework makes three key contributions: a task-space controller that incrementally models and predicts end-effector wrenches to adapt the impedance parameters of a force-motion controller; a hybrid formulation that incrementally identifies discrete dynamic modes and adapts the dynamics model within each mode; and a contact anticipation model that probabilistically estimates when contact changes occur, guiding transitions to controllers that minimise discontinuities in the anticipated contact regions. [...]",
+    "publishedIn": "PhD in Robotics at the <a href=\"https://www.cs.bham.ac.uk/research/groupings/robotics/\" target=\"_blank\" rel=\"noopener\">Intelligent Robotics Lab</a>, University of Birmingham, in collaboration with <a href=\"https://www.honda-ri.de/\" target=\"_blank\" rel=\"noopener\">Honda Research Institute (EU)</a>. Supervised by <a href=\"https://www.cs.bham.ac.uk/~sridharm/\" target=\"_blank\" rel=\"noopener\">Dr Mohan Sridharan</a>, <a href=\"https://scholar.google.com/citations?user=sLEmy_AAAAAJ\" target=\"_blank\" rel=\"noopener\">Dr Dirk Ruiken</a>, <a href=\"https://scholar.google.com/citations?hl=en&amp;user=9FSuHUQAAAAJ\" target=\"_blank\" rel=\"noopener\">Dr Jeremy Wyatt</a>, and <a href=\"https://scholar.google.com/citations?user=jZMpSNwAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noopener\">Dr Akinobu Hayashi</a>.",
+    "links": [
+      { "label": "Read Thesis (PDF)", "url": "https://phdthesis.saifsidhik.page" },
+      { "label": "Repository Record", "url": "https://etheses.bham.ac.uk/id/eprint/12673/" }
+    ],
+    "plainCite": "Saif Sidhik. (2022). \"An Adaptive Framework for Changing-Contact Robot Manipulation\". PhD thesis, University of Birmingham, UK. https://etheses.bham.ac.uk/id/eprint/12673/",
+    "bibtex": "@phdthesis{sidhik2022adaptive,\n  author  = {Saif Sidhik},\n  title   = {{An Adaptive Framework for Changing-Contact Robot Manipulation}},\n  school  = {University of Birmingham},\n  year    = {2022},\n  url     = {https://etheses.bham.ac.uk/id/eprint/12673/}\n}"
+  },
+  {
     "id": "contactchangehandle-conf",
     "type": "conference",
     "typeLabel": "Conference",
@@ -149,5 +167,24 @@
     "links": [
       { "label": "Poster", "url": "https://docs.google.com/gview?url=https://dl.dropboxusercontent.com/s/h16b7a58gl9o6a2/UK_Manipulation_Workshop_2019_Poster.pdf?dl=0" }
     ]
+  },
+  {
+    "id": "mscthesis",
+    "type": "thesis",
+    "typeLabel": "Thesis",
+    "year": 2017,
+    "authors": "S. Sidhik",
+    "title": "Graph-Based Visual SLAM for a 6DoF Robot",
+    "venue": "MSc Robotics Dissertation, School of Computer Science, University of Birmingham, UK.",
+    "image": "images/gslam.png",
+    "video": "https://www.youtube.com/embed/gfz0dfJCWEU",
+    "abstract": "This report presents the development, implementation, testing and results thereof of a graph-based Simultaneous Localisation and Mapping (SLAM) system for a 6 degrees-of-freedom robot using just the on-board monocular camera. The project aims to develop a framework for an aerial robot to create a map of the environment as it traverses through it while simultaneously localising itself within the generated map. The developed algorithm uses the sequence of images obtained from the camera to solve the SLAM problem offline. The graph-based approach adopted for this project makes use of the graphical representation of SLAM, wherein robot poses and positions of landmarks in the map become nodes of the graph and the measurements from the sensor form the constraints between them. The graph is then optimised so as to obtain the configuration of nodes (robot poses and landmark positions) that would best fit the measurements made. As the algorithm adds constraints to the graph when loop closures (previously mapped regions in the map) are re-observed, detecting false loop closures cause irrecoverable errors in the map and trajectory estimation. A novel way of filtering out false loop closure detections is presented in the report, using 'Optical Flow Check' as the final verification step. These modifications (made to the standard FAB-MAP loop detection framework) are shown in this report to be a fail-safe way of filtering out false detections. Optimising the graph using true loop closures has been shown to produce remarkable improvements in the final map and trajectory estimate.",
+    "publishedIn": "MSc Robotics dissertation, supervised by <a href=\"https://scholar.google.com/citations?hl=en&amp;user=9FSuHUQAAAAJ\" target=\"_blank\" rel=\"noopener\">Dr Jeremy L Wyatt</a>.",
+    "links": [
+      { "label": "Read Thesis (PDF)", "url": "https://github.com/justagist/monocular_visual_graph_slam/raw/master/thesis.pdf" },
+      { "label": "Code Repository", "url": "https://github.com/justagist/monocular_visual_graph_slam" }
+    ],
+    "plainCite": "Saif Sidhik. (2017). \"Graph-Based Visual SLAM for a 6DoF Robot\". MSc Robotics dissertation, University of Birmingham, UK. https://github.com/justagist/monocular_visual_graph_slam",
+    "bibtex": "@mastersthesis{sidhik2017graph,\n  author  = {Saif Sidhik},\n  title   = {{Graph-Based Visual SLAM for a 6DoF Robot}},\n  school  = {University of Birmingham},\n  type    = {{MSc Robotics dissertation}},\n  year    = {2017},\n  url     = {https://github.com/justagist/monocular_visual_graph_slam}\n}"
   }
 ]
