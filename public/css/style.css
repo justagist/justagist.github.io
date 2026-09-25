@@ -634,6 +634,9 @@ section {
     max-height: calc(2 * 1.7rem); /* ~2 lines, then clipped */
     overflow: hidden;
   }
+  /* Tags clip past two lines here, so pull the star count up front
+     instead of letting it fall off the end of the row. */
+  .card__stars { order: -1; }
   .card__chevron {
     grid-column: 3;
     grid-row: 1;
