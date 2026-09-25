@@ -23,6 +23,7 @@
     { "label": "GitHub", "icon": "github", "url": "https://github.saifsidhik.page" },
     { "label": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/in/saifsidhik/" },
     { "label": "YouTube", "icon": "youtube", "url": "https://youtube.saifsidhik.page" },
+    { "label": "Blog", "icon": "pen", "url": "https://rambles.saifsidhik.page" },
     { "label": "Email", "icon": "mail", "url": "mailto:mail@saifsidhik.page" }
   ],
   "cv": {
@@ -30,7 +31,7 @@
     "downloadUrl": "https://www.dropbox.com/s/gb2y9fkrzq0gc7s/cv_sidhik.pdf?dl=1"
   },
   "footer": {
-    "copyright": "© Saif Sidhik 2021 - 2025."
+    "copyright": "© Saif Sidhik 2021 - 2026."
   },
   "analytics": {
     "gtagId": "UA-160751137-2",

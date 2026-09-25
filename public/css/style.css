@@ -708,6 +708,34 @@ section {
   color: var(--color-text-muted);
 }
 
+.card__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.card__stars:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.card__stars[hidden] { display: none; }
+
+.card__stars svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  color: #facc15;
+}
+
+:root[data-theme="light"] .card__stars svg { color: #d97706; }
+
 .card__title {
   font-size: 1rem;
   font-weight: 600;
@@ -865,6 +893,17 @@ section {
   display: inline-block;
   vertical-align: middle;
   height: 20px;
+}
+
+.show-more {
+  display: flex;
+  margin: 1.25rem auto 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.show-more:hover {
+  color: var(--color-accent);
 }
 
 .empty {

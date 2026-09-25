@@ -34,6 +34,10 @@
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>',
     mail:
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+    pen:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>',
+    star:
+      '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2.5 15 9 22 9.8 17 14.5 18.3 21.5 12 18.2 5.7 21.5 7 14.5 2 9.8 9 9"/></svg>',
     chevronDown:
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>',
     arrowUp:
@@ -268,6 +272,10 @@
     const tags = [
       `<span class="tag tag--warm">${escapeHtml(proj.categoryLabel || proj.category || "Project")}</span>`,
       ...(proj.tags || []).map((t) => `<span class="tag tag--muted">${escapeHtml(t)}</span>`),
+      // Filled in later by loadGithubStars(), and left hidden if the repo has no stars.
+      proj.githubRepo
+        ? `<span class="card__stars" data-star-repo="${escapeHtml(proj.githubRepo)}" hidden></span>`
+        : "",
     ].join("");
 
     return `
@@ -379,6 +387,93 @@
     setupFilter("projects");
   }
 
+  // ---------- GitHub stars ----------
+  const STARS_CACHE_KEY = "gh-stars-v1";
+  const STARS_CACHE_TTL = 6 * 60 * 60 * 1000;
+
+  function readStarsCache(repos) {
+    try {
+      const cached = JSON.parse(localStorage.getItem(STARS_CACHE_KEY) || "null");
+      if (!cached || Date.now() - cached.at > STARS_CACHE_TTL) return null;
+      // A project added since the cache was written means it is already stale.
+      if (!repos.every((r) => r.toLowerCase() in cached.counts)) return null;
+      return cached.counts;
+    } catch {
+      return null;
+    }
+  }
+
+  function writeStarsCache(counts) {
+    try {
+      localStorage.setItem(STARS_CACHE_KEY, JSON.stringify({ at: Date.now(), counts }));
+    } catch {
+      // Storage blocked: harmless, the counts are just fetched again next visit.
+    }
+  }
+
+  async function fetchStarCounts(repos) {
+    const counts = {};
+
+    // One listing per owner covers every repo they own, which is far kinder to
+    // the unauthenticated rate limit (60/hour/IP) than a request per project.
+    const owners = Array.from(new Set(repos.map((r) => r.split("/")[0])));
+    await Promise.all(
+      owners.map((owner) =>
+        fetchJSON(`https://api.github.com/users/${owner}/repos?per_page=100&type=owner`)
+          .then((list) => {
+            list.forEach((r) => {
+              counts[r.full_name.toLowerCase()] = r.stargazers_count;
+            });
+          })
+          .catch(() => {})
+      )
+    );
+
+    // Anything the listing missed: a fork, or an owner with over 100 repos.
+    await Promise.all(
+      repos
+        .filter((r) => !(r.toLowerCase() in counts))
+        .map((r) =>
+          fetchJSON(`https://api.github.com/repos/${r}`)
+            .then((d) => {
+              counts[r.toLowerCase()] = d.stargazers_count;
+            })
+            .catch(() => {})
+        )
+    );
+
+    return counts;
+  }
+
+  function applyStarCounts(counts) {
+    $$("[data-star-repo]").forEach((el) => {
+      const n = counts[(el.getAttribute("data-star-repo") || "").toLowerCase()];
+      // Unknown or zero stars: leave the slot hidden.
+      if (!n) return;
+      el.innerHTML = `${ICONS.star}<span>${escapeHtml(String(n))}</span>`;
+      el.setAttribute("title", `${n} star${n === 1 ? "" : "s"} on GitHub. Opens the repository.`);
+      el.hidden = false;
+    });
+  }
+
+  // Best-effort: a failed or rate-limited request just leaves the counts off.
+  async function loadGithubStars(projects) {
+    const repos = projects.map((p) => p.githubRepo).filter(Boolean);
+    if (!repos.length) return;
+
+    const cached = readStarsCache(repos);
+    if (cached) {
+      applyStarCounts(cached);
+      return;
+    }
+
+    const counts = await fetchStarCounts(repos);
+    if (Object.keys(counts).length) {
+      applyStarCounts(counts);
+      writeStarsCache(counts);
+    }
+  }
+
   // ---------- Render: experience & education ----------
   function renderTimeline(targetId, items, type) {
     const el = $(targetId);
@@ -415,19 +510,41 @@
   }
 
   // ---------- Filter / Search wiring ----------
+  // How many cards a list shows before the "Show all" button takes over.
+  const COLLAPSE_LIMITS = { publications: 5, projects: 6 };
+
   function setupFilter(target) {
     const search = $(`#${target}Search`);
     const list = $(`#${target}List`);
     const filtersEl = $(`#${target}Filters`);
     const countEl = $(`#${target}Count`);
+    const limit = COLLAPSE_LIMITS[target] || 0;
 
     let currentFilter = "all";
     let currentQuery = "";
+    let expanded = false;
+    let moreBtn = null;
+
+    function ensureMoreButton() {
+      if (moreBtn) return moreBtn;
+      moreBtn = document.createElement("button");
+      moreBtn.type = "button";
+      moreBtn.id = `${target}More`;
+      moreBtn.className = "btn btn-ghost show-more";
+      moreBtn.addEventListener("click", () => {
+        expanded = !expanded;
+        apply();
+        // Collapsing from deep in the list would otherwise leave the reader
+        // stranded somewhere below the section.
+        if (!expanded) list.closest("section").scrollIntoView({ behavior: "smooth" });
+      });
+      list.parentNode.insertBefore(moreBtn, list.nextSibling);
+      return moreBtn;
+    }
 
     function apply() {
       const items = $$(":scope > li", list);
-      let visible = 0;
-      items.forEach((li) => {
+      const matches = items.filter((li) => {
         let pass = true;
         if (currentFilter !== "all") {
           const [key, val] = currentFilter.split(":");
@@ -438,10 +555,28 @@
         if (pass && currentQuery) {
           pass = (li.getAttribute("data-search") || "").includes(currentQuery);
         }
-        li.style.display = pass ? "" : "none";
-        if (pass) visible++;
+        return pass;
       });
+
+      const shown = limit && !expanded ? matches.slice(0, limit) : matches;
+      items.forEach((li) => {
+        li.style.display = "none";
+      });
+      shown.forEach((li) => {
+        li.style.display = "";
+      });
+
+      const visible = matches.length;
       countEl.textContent = `${visible} of ${items.length}`;
+
+      if (limit && visible > limit) {
+        const btn = ensureMoreButton();
+        btn.textContent = expanded ? "Show fewer" : `Show all ${visible}`;
+        btn.style.display = "";
+      } else if (moreBtn) {
+        moreBtn.style.display = "none";
+      }
+
       let empty = $(`#${target}Empty`);
       if (!visible) {
         if (!empty) {
@@ -464,6 +599,7 @@
         filtersEl.querySelectorAll(".chip").forEach((c) => c.classList.remove("is-active"));
         btn.classList.add("is-active");
         currentFilter = btn.getAttribute("data-filter");
+        expanded = false;
         apply();
       });
     }
@@ -471,6 +607,7 @@
     if (search) {
       search.addEventListener("input", (e) => {
         currentQuery = e.target.value.trim().toLowerCase();
+        expanded = false;
         apply();
       });
     }
@@ -481,6 +618,16 @@
   // ---------- Expand/collapse cards ----------
   function wireUpCardToggles() {
     document.body.addEventListener("click", (e) => {
+      // Checked before the header: the star badge sits inside that toggle button,
+      // and cannot be an <a> without nesting interactive content inside a <button>.
+      const starEl = e.target.closest("[data-star-repo]");
+      if (starEl && !starEl.hidden) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.open(`https://github.com/${starEl.getAttribute("data-star-repo")}`, "_blank", "noopener");
+        return;
+      }
+
       const header = e.target.closest(".card__header");
       if (header) {
         const card = header.closest(".card");
@@ -608,6 +755,7 @@
       wireUpThemeToggle();
       wireUpNav();
       wireUpBackToTop();
+      loadGithubStars(projects).catch(() => {});
     } catch (err) {
       console.error(err);
       const main = $("main");
