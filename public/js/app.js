@@ -110,26 +110,6 @@
     if (authorMeta) authorMeta.setAttribute("content", profile.name);
     const favicon = $('link[rel="icon"]');
     if (favicon && profile.favicon) favicon.setAttribute("href", profile.favicon);
-
-    // Google Analytics (optional)
-    if (profile.analytics && profile.analytics.gtagId) {
-      const id = profile.analytics.gtagId;
-      const s = document.createElement("script");
-      s.async = true;
-      s.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-      document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { window.dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", id);
-      window.gtag = gtag;
-    }
-    if (profile.analytics && profile.analytics.googleSiteVerification) {
-      const m = document.createElement("meta");
-      m.name = "google-site-verification";
-      m.content = profile.analytics.googleSiteVerification;
-      document.head.appendChild(m);
-    }
   }
 
   // ---------- Render: navbar/hero/about/contact/footer ----------

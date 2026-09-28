@@ -1,14 +1,28 @@
----
-permalink: /404.html
----
-
-<!DOCTYPE HTML>                                                                
-<html lang="en">                                                                
-    <head>                                                                      
-        <meta charset="utf-8">
-        <script type='text/javascript'>
-            console.log("https://justagist.github.io"+window.location.pathname + window.location.search + window.location.hash);
-            window.location.replace("https://justagist.github.io"+window.location.pathname + window.location.search + window.location.hash);
-        </script>
-    </head>                                                                   
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found - Saif Sidhik</title>
+    <meta name="robots" content="noindex" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/png" href="/images/logo_s_transparent.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("ss-theme");
+          if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <main class="container" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1rem">
+      <img src="/images/logo_s_transparent.png" alt="" width="56" height="56" />
+      <h1>Page not found</h1>
+      <p style="color:var(--color-text-muted)">The page you were looking for does not exist or has moved.</p>
+      <a class="btn btn-primary" href="/">Go to the homepage</a>
+    </main>
+  </body>
 </html>
