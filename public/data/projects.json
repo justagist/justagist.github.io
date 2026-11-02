@@ -389,6 +389,35 @@
     ]
   },
   {
+    "id": "rapoport",
+    "category": "app",
+    "categoryLabel": "Side Project",
+    "title": "Rapoport",
+    "shortDescription": "Axelrod's tournament, in your browser. Write a Python strategy for the iterated prisoner's dilemma, run it round-robin against the classics, and watch every move. Fully local: nothing you write leaves your computer.",
+    "image": "https://raw.githubusercontent.com/justagist/rapoport/main/icons/icon-512.png",
+    "description": "A static web app around the <a href=\"https://github.com/Axelrod-Python/Axelrod\" target=\"_blank\" rel=\"noopener\">Axelrod</a> Python library for the iterated prisoner's dilemma. The library runs inside the visitor's browser through Pyodide, so the site needs no server and nothing a visitor writes leaves their computer. A way to try out different strategies for the prisoner's dilemma from game theory and compare them against each other.",
+    "githubRepo": "justagist/rapoport",
+    "features": [
+      "A roster of the library's 240 strategies plus your own.",
+      "An in-browser editor for writing strategies as Axelrod <code>Player</code> subclasses, with a check that compiles them and plays a smoke match against Tit For Tat.",
+      "Round-robin tournaments with configurable turns, repetitions, noise and seed, shown as a ranked payoff matrix and the move-by-move tape of every match.",
+      "Strategies stay in the browser and can be exported and imported as <code>.py</code> files.",
+      "Installable PWA: the Python runtime is cached after the first visit, so later visits are quick and work offline."
+    ],
+    "tags": [
+      "Python",
+      "Pyodide",
+      "PWA",
+      "Game Theory"
+    ],
+    "links": [
+      {
+        "label": "Live App",
+        "url": "https://saifsidhik.page/rapoport/"
+      }
+    ]
+  },
+  {
     "id": "knightschool",
     "category": "app",
     "categoryLabel": "Side Project",
