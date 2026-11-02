@@ -91,6 +91,82 @@
     ]
   },
   {
+    "id": "pybulletrobot",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "PyBullet Robot",
+    "shortDescription": "A general Python interface class for robot simulations using PyBullet. Provides a pybullet inverse kinematics interface supporting multi-end-effector targets and floating-base robots.",
+    "image": "images/pb_robot.png",
+    "description": "A general Python interface class for robot simulations using PyBullet. A pybullet inverse kinematics interface that can be used for getting joint position values when end-effector/link targets are provided. Supports multi-end-effector targets and floating-base robots. The robot can be directly controlled using position, velocity, or torque control of joints. Example implementations of task-space control (Impedance control, Hybrid force-motion control) using joint torque control is also available.",
+    "githubRepo": "justagist/pybullet_robot",
+    "tags": [
+      "Python",
+      "PyBullet",
+      "Simulation",
+      "Control"
+    ],
+    "links": [
+      {
+        "label": "Upstream (pypi)",
+        "url": "https://pypi.org/project/pybullet-robot/"
+      }
+    ]
+  },
+  {
+    "id": "mujocorobot",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "MuJoCo Robot",
+    "shortDescription": "A general Python interface for robot simulations using MuJoCo.",
+    "image": "https://media.githubusercontent.com/media/justagist/_assets/refs/heads/main/mujoco_robot/mujoco_robot_tsctrl.gif",
+    "description": "A general Python interface for robot simulations using <a href=\"https://mujoco.org\" target=\"_blank\" rel=\"noopener\">MuJoCo</a>. Its public API mirrors the <a href=\"https://github.com/justagist/pybullet_robot\" target=\"_blank\" rel=\"noopener\">pybullet_robot</a> package so that controllers written against that backend can be run here with minimal changes. <code>MujocoRobot</code> is a single object to load, introspect, control, and read state from a robot, implemented directly on MuJoCo's <code>MjModel</code> + <code>MjData</code>.",
+    "githubRepo": "justagist/mujoco_robot",
+    "features": [
+      "Load an MJCF/URDF file or wrap an existing <code>(model, data)</code>; assemble a world (ground, light, props, force-torque sensors) with <code>MjSpec</code> helpers.",
+      "Introspection: name&lt;-&gt;id maps for bodies, joints, actuators, sites, geoms and sensors, with per-joint <code>qpos</code>/<code>dof</code> addressing.",
+      "Full state access: joint, base and link/site pose and velocity, geometric Jacobian, gravity-compensation torques, and a <code>get_robot_states</code> snapshot.",
+      "Position control via the model's actuators, and torque/impedance control via <code>data.qfrc_applied</code>, with a PVT-PD command and position/torque mode switching.",
+      "Contact and force-torque sensing, plus cosmetics / domain-randomisation helpers.",
+      "Inverse kinematics: <code>differential_ik</code> for a single frame, and <a href=\"https://github.com/kevinzakka/mink\" target=\"_blank\" rel=\"noopener\">mink</a> for whole-body IK (optional)."
+    ],
+    "tags": [
+      "Python",
+      "MuJoCo",
+      "Simulation",
+      "Control"
+    ],
+    "links": [
+      {
+        "label": "Upstream (pypi)",
+        "url": "https://pypi.org/project/mujoco-robot/"
+      }
+    ]
+  },
+  {
+    "id": "rosrerunbridge",
+    "category": "library",
+    "categoryLabel": "Open Source Library",
+    "title": "ROS Rerun Bridge",
+    "shortDescription": "Your ROS 2 topics in Rerun, from one YAML file. No code. A config-driven, pluggable bridge that shows live ROS 2 data in the Rerun viewer, as you would in rviz, with each message drawn in its TF frame.",
+    "image": "https://media.githubusercontent.com/media/justagist/_assets/main/ros_rerun_bridge/ros_rerun_tb3_sim.gif",
+    "description": "Show live ROS 2 data in the <a href=\"https://rerun.io\" target=\"_blank\" rel=\"noopener\">Rerun</a> viewer, as you would in rviz. All you write is a config file listing the topics you want to see: the bridge subscribes to them and sends each message to Rerun, drawing spatial data in its TF frame. Built-in modules cover rviz's common displays and need no code, and a new message type can be supported with a small module class. Tested with Rerun 0.40 and ROS 2 Jazzy.",
+    "githubRepo": "justagist/ros_rerun_bridge",
+    "features": [
+      "Config, not code: one YAML file says which topics to show and how, and is checked when the bridge starts.",
+      "TF and URDF aware: data is drawn in its TF frame, and the robot model is loaded from its URDF and moves with TF or joint states.",
+      "Built-in modules for rviz's common displays: robot model, images, point clouds, laser scans, range sensors, markers, maps and costmaps, poses, wrenches, and more.",
+      "Time series, bar charts and state timelines from numeric fields of any message, plus ROS log and diagnostics views.",
+      "Remote viewing: any number of native or browser viewers can connect to a bridge running on a robot. Can also record to <code>.rrd</code> files or play back ROS bags on the bag's clock.",
+      "Extensible: support a new message type with a small module class, in this package or in your own."
+    ],
+    "tags": [
+      "Python",
+      "ROS 2",
+      "Rerun",
+      "Visualisation"
+    ]
+  },
+  {
     "id": "ros2httpgateway",
     "category": "library",
     "categoryLabel": "Open Source Library",
@@ -220,58 +296,6 @@
       {
         "label": "Upstream (ros-controls)",
         "url": "https://github.com/ros-controls/kinematics_interface"
-      }
-    ]
-  },
-  {
-    "id": "pybulletrobot",
-    "category": "library",
-    "categoryLabel": "Open Source Library",
-    "title": "PyBullet Robot",
-    "shortDescription": "A general Python interface class for robot simulations using PyBullet. Provides a pybullet inverse kinematics interface supporting multi-end-effector targets and floating-base robots.",
-    "image": "images/pb_robot.png",
-    "description": "A general Python interface class for robot simulations using PyBullet. A pybullet inverse kinematics interface that can be used for getting joint position values when end-effector/link targets are provided. Supports multi-end-effector targets and floating-base robots. The robot can be directly controlled using position, velocity, or torque control of joints. Example implementations of task-space control (Impedance control, Hybrid force-motion control) using joint torque control is also available.",
-    "githubRepo": "justagist/pybullet_robot",
-    "tags": [
-      "Python",
-      "PyBullet",
-      "Simulation",
-      "Control"
-    ],
-    "links": [
-      {
-        "label": "Upstream (pypi)",
-        "url": "https://pypi.org/project/pybullet-robot/"
-      }
-    ]
-  },
-  {
-    "id": "mujocorobot",
-    "category": "library",
-    "categoryLabel": "Open Source Library",
-    "title": "MuJoCo Robot",
-    "shortDescription": "A general Python interface for robot simulations using MuJoCo.",
-    "image": "https://media.githubusercontent.com/media/justagist/_assets/refs/heads/main/mujoco_robot/mujoco_robot_tsctrl.gif",
-    "description": "A general Python interface for robot simulations using <a href=\"https://mujoco.org\" target=\"_blank\" rel=\"noopener\">MuJoCo</a>. Its public API mirrors the <a href=\"https://github.com/justagist/pybullet_robot\" target=\"_blank\" rel=\"noopener\">pybullet_robot</a> package so that controllers written against that backend can be run here with minimal changes. <code>MujocoRobot</code> is a single object to load, introspect, control, and read state from a robot, implemented directly on MuJoCo's <code>MjModel</code> + <code>MjData</code>.",
-    "githubRepo": "justagist/mujoco_robot",
-    "features": [
-      "Load an MJCF/URDF file or wrap an existing <code>(model, data)</code>; assemble a world (ground, light, props, force-torque sensors) with <code>MjSpec</code> helpers.",
-      "Introspection: name&lt;-&gt;id maps for bodies, joints, actuators, sites, geoms and sensors, with per-joint <code>qpos</code>/<code>dof</code> addressing.",
-      "Full state access: joint, base and link/site pose and velocity, geometric Jacobian, gravity-compensation torques, and a <code>get_robot_states</code> snapshot.",
-      "Position control via the model's actuators, and torque/impedance control via <code>data.qfrc_applied</code>, with a PVT-PD command and position/torque mode switching.",
-      "Contact and force-torque sensing, plus cosmetics / domain-randomisation helpers.",
-      "Inverse kinematics: <code>differential_ik</code> for a single frame, and <a href=\"https://github.com/kevinzakka/mink\" target=\"_blank\" rel=\"noopener\">mink</a> for whole-body IK (optional)."
-    ],
-    "tags": [
-      "Python",
-      "MuJoCo",
-      "Simulation",
-      "Control"
-    ],
-    "links": [
-      {
-        "label": "Upstream (pypi)",
-        "url": "https://pypi.org/project/mujoco-robot/"
       }
     ]
   },
